@@ -12,6 +12,9 @@
 		606DBD2A2226F98700621EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 606DBD292226F98700621EF1 /* Assets.xcassets */; };
 		606DBD2D2226F98700621EF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606DBD2B2226F98700621EF1 /* LaunchScreen.storyboard */; };
 		606DBD382226F98800621EF1 /* apiParseAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD372226F98800621EF1 /* apiParseAppTests.swift */; };
+		606DBD462226FE4200621EF1 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD452226FE4200621EF1 /* ApiService.swift */; };
+		606DBD482226FED400621EF1 /* WebRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD472226FED400621EF1 /* WebRequestImpl.swift */; };
+		606DBD4B2226FF5500621EF1 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD4A2226FF5500621EF1 /* MainConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 		606DBD332226F98800621EF1 /* apiParseAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apiParseAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		606DBD372226F98800621EF1 /* apiParseAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiParseAppTests.swift; sourceTree = "<group>"; };
 		606DBD392226F98800621EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		606DBD452226FE4200621EF1 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		606DBD472226FED400621EF1 /* WebRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequestImpl.swift; sourceTree = "<group>"; };
+		606DBD4A2226FF5500621EF1 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,8 @@
 		606DBD212226F98700621EF1 /* apiParseApp */ = {
 			isa = PBXGroup;
 			children = (
+				606DBD492226FF4100621EF1 /* Utilities */,
+				606DBD442226FDDC00621EF1 /* Services */,
 				606DBD432226FD5400621EF1 /* View */,
 				606DBD422226FD4500621EF1 /* Controller */,
 				606DBD292226F98700621EF1 /* Assets.xcassets */,
@@ -107,6 +115,23 @@
 				606DBD2B2226F98700621EF1 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		606DBD442226FDDC00621EF1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				606DBD452226FE4200621EF1 /* ApiService.swift */,
+				606DBD472226FED400621EF1 /* WebRequestImpl.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		606DBD492226FF4100621EF1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				606DBD4A2226FF5500621EF1 /* MainConstants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,8 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606DBD4B2226FF5500621EF1 /* MainConstants.swift in Sources */,
+				606DBD482226FED400621EF1 /* WebRequestImpl.swift in Sources */,
 				606DBD252226F98700621EF1 /* MainVC.swift in Sources */,
 				606DBD232226F98700621EF1 /* AppDelegate.swift in Sources */,
+				606DBD462226FE4200621EF1 /* ApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
