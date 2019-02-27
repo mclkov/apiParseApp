@@ -8,6 +8,6 @@
 
 import Foundation
 
-class USDCurrency: Currency { }
-class EURCurrency: Currency { }
-class GBPCurrency: Currency { }
+class USDCurrencyJSON: CurrencyJSON { }
+class EURCurrencyJSON: CurrencyJSON { }
+class GBPCurrencyJSON: CurrencyJSON { }

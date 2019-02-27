@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Currency {
+class CurrencyJSON: Decodable {
     var code: String = ""
     var symbol: String = ""
     var rate: String = ""

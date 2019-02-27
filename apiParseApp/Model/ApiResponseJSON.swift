@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct ApiResponseJSON {
+struct ApiResponseJSON: Decodable {
     let time: TimeJSON
     let disclaimer: String
     let chartName: String
     
-//    let bpi = 
+    let bpi: [CurrencyJSON]
 }
