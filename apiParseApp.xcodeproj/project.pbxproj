@@ -75,10 +75,9 @@
 		606DBD212226F98700621EF1 /* apiParseApp */ = {
 			isa = PBXGroup;
 			children = (
-				606DBD222226F98700621EF1 /* AppDelegate.swift */,
-				606DBD242226F98700621EF1 /* MainVC.swift */,
+				606DBD432226FD5400621EF1 /* View */,
+				606DBD422226FD4500621EF1 /* Controller */,
 				606DBD292226F98700621EF1 /* Assets.xcassets */,
-				606DBD2B2226F98700621EF1 /* LaunchScreen.storyboard */,
 				606DBD2E2226F98700621EF1 /* Info.plist */,
 			);
 			path = apiParseApp;
@@ -91,6 +90,23 @@
 				606DBD392226F98800621EF1 /* Info.plist */,
 			);
 			path = apiParseAppTests;
+			sourceTree = "<group>";
+		};
+		606DBD422226FD4500621EF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				606DBD222226F98700621EF1 /* AppDelegate.swift */,
+				606DBD242226F98700621EF1 /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		606DBD432226FD5400621EF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				606DBD2B2226F98700621EF1 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
