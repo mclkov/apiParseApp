@@ -27,15 +27,21 @@ class ApiService {
             let request: WebRequest = WebRequestImpl(website: MainConstants.apiUrl, method: .GET)
             request.execute { (result) in
                 guard let data = result else { return }
+                guard let jsonData = self.parseJSON(data: data) else { return }
                 
-                do {
-                    let jsonData = try JSONDecoder().decode(ApiResponseJSON.self, from: data)
-                    print(jsonData.chartName)
-                    
-                } catch let jsonError {
-                    print("Cannot parse json: ", jsonError)
-                }
+                print(jsonData.chartName)
             }
         }
+    }
+    
+    func parseJSON(data: Data) -> ApiResponseJSON? {
+        do {
+            let jsonData = try JSONDecoder().decode(ApiResponseJSON.self, from: data)
+            return jsonData
+        } catch let jsonError {
+            print("Cannot parse json: ", jsonError)
+        }
+        
+        return nil
     }
 }
