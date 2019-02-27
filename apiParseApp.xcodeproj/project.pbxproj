@@ -17,6 +17,8 @@
 		606DBD4B2226FF5500621EF1 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD4A2226FF5500621EF1 /* MainConstants.swift */; };
 		606DBD4E222705D000621EF1 /* ApiResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD4D222705D000621EF1 /* ApiResponseJSON.swift */; };
 		606DBD512227061B00621EF1 /* TimeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD502227061B00621EF1 /* TimeJSON.swift */; };
+		606DBD54222706D200621EF1 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD53222706D200621EF1 /* Currency.swift */; };
+		606DBD5A2227095F00621EF1 /* CurrencyInheritance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD592227095F00621EF1 /* CurrencyInheritance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		606DBD4A2226FF5500621EF1 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
 		606DBD4D222705D000621EF1 /* ApiResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseJSON.swift; sourceTree = "<group>"; };
 		606DBD502227061B00621EF1 /* TimeJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeJSON.swift; sourceTree = "<group>"; };
+		606DBD53222706D200621EF1 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		606DBD592227095F00621EF1 /* CurrencyInheritance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInheritance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,9 +155,19 @@
 		606DBD4F2227060B00621EF1 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				606DBD52222706BC00621EF1 /* BitcoinPriceIndex */,
 				606DBD502227061B00621EF1 /* TimeJSON.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		606DBD52222706BC00621EF1 /* BitcoinPriceIndex */ = {
+			isa = PBXGroup;
+			children = (
+				606DBD53222706D200621EF1 /* Currency.swift */,
+				606DBD592227095F00621EF1 /* CurrencyInheritance.swift */,
+			);
+			path = BitcoinPriceIndex;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +273,9 @@
 				606DBD4B2226FF5500621EF1 /* MainConstants.swift in Sources */,
 				606DBD482226FED400621EF1 /* WebRequestImpl.swift in Sources */,
 				606DBD252226F98700621EF1 /* MainVC.swift in Sources */,
+				606DBD5A2227095F00621EF1 /* CurrencyInheritance.swift in Sources */,
 				606DBD232226F98700621EF1 /* AppDelegate.swift in Sources */,
+				606DBD54222706D200621EF1 /* Currency.swift in Sources */,
 				606DBD512227061B00621EF1 /* TimeJSON.swift in Sources */,
 				606DBD462226FE4200621EF1 /* ApiService.swift in Sources */,
 				606DBD4E222705D000621EF1 /* ApiResponseJSON.swift in Sources */,

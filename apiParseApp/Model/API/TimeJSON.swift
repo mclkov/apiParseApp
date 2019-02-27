@@ -12,4 +12,5 @@ struct TimeJSON {
     let update: String
     let updatedISO: String
     let updateduk: String
+    
 }

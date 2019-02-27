@@ -10,4 +10,8 @@ import Foundation
 
 struct ApiResponseJSON {
     let time: TimeJSON
+    let disclaimer: String
+    let chartName: String
+    
+//    let bpi = 
 }
