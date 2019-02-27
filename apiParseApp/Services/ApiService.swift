@@ -27,8 +27,14 @@ class ApiService {
             let request: WebRequest = WebRequestImpl(website: MainConstants.apiUrl, method: .GET)
             request.execute { (result) in
                 guard let data = result else { return }
-                let string = String(data: data, encoding: .utf8)
-                print(string)
+                
+                do {
+                    let jsonData = try JSONDecoder().decode(ApiResponseJSON.self, from: data)
+                    print(jsonData.chartName)
+                    
+                } catch let jsonError {
+                    print("Cannot parse json: ", jsonError)
+                }
             }
         }
     }

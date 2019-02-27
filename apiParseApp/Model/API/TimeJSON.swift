@@ -9,8 +9,7 @@
 import Foundation
 
 struct TimeJSON: Decodable {
-    let update: String
+    let updated: String
     let updatedISO: String
     let updateduk: String
-    let bpi: [CurrencyJSON]
 }

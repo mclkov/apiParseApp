@@ -13,7 +13,7 @@ class CurrencyJSON: Decodable {
     var symbol: String = ""
     var rate: String = ""
     var description: String = ""
-    var rateFloat: String = ""
+    var rateFloat: Double = 0.0
     
     private enum CodingKeys: String, CodingKey {
         case
