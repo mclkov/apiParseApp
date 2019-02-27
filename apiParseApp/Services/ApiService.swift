@@ -21,4 +21,15 @@ protocol WebRequest {
 
 class ApiService {
     static let shared = ApiService()
+    
+    func requestData() {
+        DispatchQueue.global(qos: .background).async {
+            let request: WebRequest = WebRequestImpl(website: MainConstants.apiUrl, method: .GET)
+            request.execute { (result) in
+                guard let data = result else { return }
+                let string = String(data: data, encoding: .utf8)
+                print(string)
+            }
+        }
+    }
 }

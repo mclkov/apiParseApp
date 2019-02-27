@@ -15,8 +15,11 @@ class MainVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         view.backgroundColor = .green
+        fetchApiData()
     }
-
-
+    
+    func fetchApiData() {
+        ApiService.shared.requestData()
+    }
 }
 
