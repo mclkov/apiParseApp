@@ -23,7 +23,6 @@ class MainVC: CustomViewController {
     let updateRequestButton = UIButton()
     let copyrightLabel = UILabel()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,18 +48,10 @@ class MainVC: CustomViewController {
     }
     
     @objc func updateRequestButtonPressed() {
-        startUpdateButtonSpinning()
+        startUpdateSequence()
         self.fetchApiData {
             self.stopUpdateButtonSpinning()
         }
-    }
-    
-    func startUpdateButtonSpinning() {
-        updateRequestButton.rotate360Degrees()
-    }
-    
-    func stopUpdateButtonSpinning() {
-        updateRequestButton.layer.removeAnimation(forKey: MainConstants.animationKey)
     }
     
     func fetchApiData(completionHandler: @escaping () -> Void) {

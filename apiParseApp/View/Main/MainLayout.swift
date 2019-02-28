@@ -9,6 +9,35 @@
 import UIKit
 
 extension MainVC {
+    func startUpdateSequence() {
+        startUpdateButtonSpinning()
+        disableUpdateButton()
+    }
+    
+    func startUpdateButtonSpinning() {
+        updateRequestButton.rotate360Degrees()
+    }
+    
+    func disableUpdateButton() {
+        updateRequestButton.isEnabled = false
+    }
+    
+    func stopUpdateSequence() {
+        stopUpdateButtonSpinning()
+    }
+    
+    func stopUpdateButtonSpinning() {
+        updateRequestButton.layer.removeAnimation(forKey: MainConstants.animationKey)
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + MainConstants.delayInSecondsBetweenQueries) {
+            self.enableUpdateButton()
+        }
+    }
+    
+    func enableUpdateButton() {
+        updateRequestButton.isEnabled = true
+    }
+    
     func setupView() {
         setupBackgroundColor()
         

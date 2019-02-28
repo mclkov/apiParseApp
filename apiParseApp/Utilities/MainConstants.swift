@@ -16,4 +16,5 @@ struct MainConstants {
     static let copyrights = "Powered by CoinDesk"
     
     static let animationKey = "transform.rotation"
+    static let delayInSecondsBetweenQueries: Double = 60.0
 }
