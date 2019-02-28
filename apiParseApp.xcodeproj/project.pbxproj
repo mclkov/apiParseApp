@@ -161,8 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				606DBD4A2226FF5500621EF1 /* MainConstants.swift */,
-				606DBD6A2227CB1700621EF1 /* String+htmlToUtf8.swift */,
 				606DBD732227E98E00621EF1 /* StorageConstants.swift */,
+				606DBD6A2227CB1700621EF1 /* String+htmlToUtf8.swift */,
 				606DBD752227F37900621EF1 /* String+dateConvertation.swift */,
 			);
 			path = Utilities;

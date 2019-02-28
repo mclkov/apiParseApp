@@ -18,10 +18,78 @@ class StorageService {
         get {
             return defaults.string(forKey: StorageConstants.chartNameKey) ?? noDataMessage
         }
+        
+        set {
+            defaults.set(newValue, forKey: StorageConstants.chartNameKey)
+        }
     }
     var timeUpdated: String {
         get {
             return defaults.string(forKey: StorageConstants.timeUpdatedKey) ?? noDataMessage
+        }
+        
+        set {
+            defaults.set(newValue, forKey: StorageConstants.timeUpdatedKey)
+        }
+    }
+    
+    var usdSymbol: String {
+        get {
+            return defaults.string(forKey: StorageConstants.usdSymbolKey) ?? ""
+        }
+        
+        set {
+            defaults.set(newValue, forKey: StorageConstants.usdSymbolKey)
+        }
+    }
+    
+    var usdRate: String {
+        get {
+            return defaults.string(forKey: StorageConstants.usdRateKey) ?? noDataMessage
+        }
+        
+        set {
+            defaults.set(newValue, forKey: StorageConstants.usdRateKey)
+        }
+    }
+    
+    var eurSymbol: String {
+        get {
+            return defaults.string(forKey: StorageConstants.eurSymbolKey) ?? ""
+        }
+        
+        set {
+            defaults.set(newValue, forKey: StorageConstants.eurSymbolKey)
+        }
+    }
+    
+    var eurRate: String {
+        get {
+            return defaults.string(forKey: StorageConstants.eurRateKey) ?? noDataMessage
+        }
+        
+        set {
+            defaults.set(newValue, forKey: StorageConstants.eurRateKey)
+        }
+    }
+    
+    var gbpSymbol: String {
+        get {
+            return defaults.string(forKey: StorageConstants.gbpSymbolKey) ?? ""
+        }
+        
+        set {
+            defaults.set(newValue, forKey: StorageConstants.gbpSymbolKey)
+        }
+    }
+    
+    var gbpRate: String {
+        get {
+            return defaults.string(forKey: StorageConstants.gbpRateKey) ?? noDataMessage
+        }
+        
+        set {
+            defaults.set(newValue, forKey: StorageConstants.gbpRateKey)
         }
     }
 }

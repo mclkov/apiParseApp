@@ -9,12 +9,6 @@
 import Foundation
 
 extension String {
-    func convertStringToDate() -> Date? {
-        let dateFormatter = ISO8601DateFormatter()
-        let date = dateFormatter.date(from: self)
-        return date
-    }
-    
     func getLocalTimeStringFrom() -> String? {
         guard let isoDateToString = self.convertStringToDate() else {
             return nil
@@ -25,6 +19,12 @@ extension String {
         dateFormatter.dateFormat = "MMM dd, yyyy HH:mm:ss (zzz)"
         
         let date = dateFormatter.string(from: isoDateToString)
+        return date
+    }
+    
+    func convertStringToDate() -> Date? {
+        let dateFormatter = ISO8601DateFormatter()
+        let date = dateFormatter.date(from: self)
         return date
     }
 }
