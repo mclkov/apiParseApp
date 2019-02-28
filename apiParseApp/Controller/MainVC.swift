@@ -26,9 +26,18 @@ class MainVC: CustomViewController {
         
         self.setupView()
         fetchApiData()
-        
-        setupChartName("BTC")
-        setupTimeUpdated(time: "12/12/1990 00:00:00")
+    }
+    
+    func fetchApiData() {
+        ApiService.shared.requestData { (data) in
+            guard let jsonData = data else { return }
+            self.showData(data: jsonData)
+        }
+    }
+    
+    func showData(data: ApiResponseJSON) {
+        setupChartName(data.chartName)
+        setupTimeUpdated(time: data.time.updated)
         
         setupUsdSymbolLabel(symbol: "$")
         setupUsdRateLabel(value: "100")
@@ -38,13 +47,6 @@ class MainVC: CustomViewController {
         
         setupGbpSymbolLabel(symbol: "@")
         setupGbpRateLabel(value: "130")
-    }
-    
-    func fetchApiData() {
-        ApiService.shared.requestData { (data) in
-            guard let jsonData = data else { return }
-            print(jsonData.chartName)
-        }
     }
 }
 

@@ -22,6 +22,7 @@
 		606DBD622227A54500621EF1 /* MainConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD612227A54500621EF1 /* MainConstraints.swift */; };
 		606DBD652227A5B700621EF1 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD642227A5B700621EF1 /* ColorScheme.swift */; };
 		606DBD672227A75000621EF1 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD662227A75000621EF1 /* CustomViewController.swift */; };
+		606DBD6B2227CB1700621EF1 /* String+htmlToUtf8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD6A2227CB1700621EF1 /* String+htmlToUtf8.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		606DBD612227A54500621EF1 /* MainConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstraints.swift; sourceTree = "<group>"; };
 		606DBD642227A5B700621EF1 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		606DBD662227A75000621EF1 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		606DBD6A2227CB1700621EF1 /* String+htmlToUtf8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+htmlToUtf8.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				606DBD4A2226FF5500621EF1 /* MainConstants.swift */,
+				606DBD6A2227CB1700621EF1 /* String+htmlToUtf8.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				606DBD6022279EBF00621EF1 /* MainLayout.swift in Sources */,
 				606DBD672227A75000621EF1 /* CustomViewController.swift in Sources */,
 				606DBD252226F98700621EF1 /* MainVC.swift in Sources */,
+				606DBD6B2227CB1700621EF1 /* String+htmlToUtf8.swift in Sources */,
 				606DBD232226F98700621EF1 /* AppDelegate.swift in Sources */,
 				606DBD54222706D200621EF1 /* CurrencyJSON.swift in Sources */,
 				606DBD652227A5B700621EF1 /* ColorScheme.swift in Sources */,
