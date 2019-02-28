@@ -108,7 +108,7 @@ extension MainVC {
         buttonAvailability.translatesAutoresizingMaskIntoConstraints = false
         buttonAvailability.isHidden = true
         
-        buttonAvailability.bottomAnchor.constraint(equalTo: updateRequestButton.topAnchor).isActive = true
+        buttonAvailability.bottomAnchor.constraint(equalTo: updateRequestButton.topAnchor, constant: -10).isActive = true
         buttonAvailability.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 
         buttonAvailability.heightAnchor.constraint(equalToConstant: 20).isActive = true
