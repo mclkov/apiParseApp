@@ -25,7 +25,8 @@ class MainVC: CustomViewController {
         super.viewDidLoad()
         
         self.setupView()
-//        fetchApiData()
+        fetchApiData()
+        
         setupChartName("BTC")
         setupTimeUpdated(time: "12/12/1990 00:00:00")
         
@@ -40,7 +41,10 @@ class MainVC: CustomViewController {
     }
     
     func fetchApiData() {
-        ApiService.shared.requestData()
+        ApiService.shared.requestData { (data) in
+            guard let jsonData = data else { return }
+            print(jsonData.chartName)
+        }
     }
 }
 

@@ -22,14 +22,14 @@ protocol WebRequest {
 class ApiService {
     static let shared = ApiService()
     
-    func requestData() {
+    func requestData(_ completionHandler: @escaping (_ data: ApiResponseJSON?) -> Void) {
         DispatchQueue.global(qos: .background).async {
             let request: WebRequest = WebRequestImpl(website: MainConstants.apiUrl, method: .GET)
             request.execute { (result) in
                 guard let data = result else { return }
                 guard let jsonData = self.parseJSON(data: data) else { return }
                 
-                print(jsonData.chartName)
+                completionHandler(jsonData)
             }
         }
     }
