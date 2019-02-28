@@ -30,6 +30,7 @@
 		606DBD7D2228335B00621EF1 /* Main+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD7C2228335B00621EF1 /* Main+showAlert.swift */; };
 		606DBD7F22285F2400621EF1 /* MainLayout+ExchangeRateLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD7E22285F2400621EF1 /* MainLayout+ExchangeRateLabels.swift */; };
 		606DBD812228622800621EF1 /* MainLayout+updateButtonBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD802228622800621EF1 /* MainLayout+updateButtonBehaviour.swift */; };
+		606DBD8322286A6F00621EF1 /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD8222286A6F00621EF1 /* CalculatorVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		606DBD7C2228335B00621EF1 /* Main+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+showAlert.swift"; sourceTree = "<group>"; };
 		606DBD7E22285F2400621EF1 /* MainLayout+ExchangeRateLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainLayout+ExchangeRateLabels.swift"; sourceTree = "<group>"; };
 		606DBD802228622800621EF1 /* MainLayout+updateButtonBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainLayout+updateButtonBehaviour.swift"; sourceTree = "<group>"; };
+		606DBD8222286A6F00621EF1 /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				606DBD242226F98700621EF1 /* MainVC.swift */,
+				606DBD8222286A6F00621EF1 /* CalculatorVC.swift */,
 				606DBD662227A75000621EF1 /* CustomViewController.swift */,
 				606DBD222226F98700621EF1 /* AppDelegate.swift */,
 			);
@@ -308,6 +311,7 @@
 				606DBD7F22285F2400621EF1 /* MainLayout+ExchangeRateLabels.swift in Sources */,
 				606DBD762227F37900621EF1 /* String+dateConvertation.swift in Sources */,
 				606DBD7D2228335B00621EF1 /* Main+showAlert.swift in Sources */,
+				606DBD8322286A6F00621EF1 /* CalculatorVC.swift in Sources */,
 				606DBD482226FED400621EF1 /* WebRequestImpl.swift in Sources */,
 				606DBD6022279EBF00621EF1 /* MainLayout.swift in Sources */,
 				606DBD672227A75000621EF1 /* CustomViewController.swift in Sources */,
