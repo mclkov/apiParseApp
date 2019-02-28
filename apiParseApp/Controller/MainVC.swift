@@ -39,8 +39,8 @@ class MainVC: CustomViewController {
     }
     
     func showData(data: ApiResponseJSON) {
-        setupChartName(data.chartName)
-        setupTimeUpdated(time: data.time.updated)
+        chartNameLabel.text = data.chartName
+        timeUpdatedLabel.text =  data.time.updated
         processExchangeRates(currencies: data.bpi)
     }
     
@@ -58,14 +58,14 @@ class MainVC: CustomViewController {
         
         switch currencyKey {
         case "USD":
-            setupUsdSymbolLabel(symbol: currencySymbol)
-            setupUsdRateLabel(value: currencyInfo.rate)
-//        case "GBP":
-//            setupGbpSymbolLabel(symbol: currencySymbol)
-//            setupGbpRateLabel(value: currencyInfo.rate)
-//        case "EUR":
-//            setupEurSymbolLabel(symbol: currencySymbol)
-//            setupEurRateLabel(value: currencyInfo.rate)
+            usdSymbolLabel.text = currencySymbol
+            usdRateLabel.text = currencyInfo.rate
+        case "GBP":
+            gbpSymbolLabel.text = currencySymbol
+            gbpRateLabel.text = currencyInfo.rate
+        case "EUR":
+            eurSymbolLabel.text = currencySymbol
+            eurRateLabel.text = currencyInfo.rate
 
 
         default:
