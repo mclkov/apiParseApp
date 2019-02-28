@@ -21,6 +21,7 @@ class MainVC: CustomViewController {
     let eurRateLabel = UILabel()
     
     let updateRequestButton = UIButton()
+    let buttonAvailability = UILabel()
     let copyrightLabel = UILabel()
     
     override func viewDidLoad() {
