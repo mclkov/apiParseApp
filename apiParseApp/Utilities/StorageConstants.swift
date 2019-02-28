@@ -14,10 +14,13 @@ struct StorageConstants {
     
     static let usdSymbolKey = "usdSymbol"
     static let usdRateKey = "usdRate"
+    static let usdRateFloatKey = "usdRateFloat"
     
     static let eurSymbolKey = "eurSymbol"
     static let eurRateKey = "eurRate"
+    static let eurRateFloatKey = "eurRateFloat"
     
     static let gbpSymbolKey = "gbpSymbol"
     static let gbpRateKey = "gbpRate"
+    static let gbpRateFloatKey = "gbpRateFloat"
 }

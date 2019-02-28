@@ -53,6 +53,16 @@ class StorageService {
         }
     }
     
+    var usdRateFloat: Float {
+        get {
+            return defaults.string(forKey: StorageConstants.usdRateKey) ?? noDataMessage
+        }
+        
+        set {
+            defaults.set(newValue, forKey: StorageConstants.usdRateKey)
+        }
+    }
+    
     var eurSymbol: String {
         get {
             return defaults.string(forKey: StorageConstants.eurSymbolKey) ?? ""
