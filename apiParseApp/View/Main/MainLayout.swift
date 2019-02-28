@@ -22,7 +22,7 @@ extension MainVC {
         updateRequestButton.isEnabled = false
     }
     
-    func stopUpdateSequenceWithDelay() {
+    func stopUpdateSequenceWithQueryDelay() {
         stopUpdateButtonSpinning()
         DispatchQueue.main.asyncAfter(deadline: .now() + MainConstants.delayInSecondsBetweenQueries) {
             self.enableUpdateButton()

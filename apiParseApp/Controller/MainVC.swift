@@ -50,7 +50,7 @@ class MainVC: CustomViewController {
     @objc func updateRequestButtonPressed() {
         startUpdateSequence()
         self.fetchApiData {
-            self.stopUpdateSequenceWithDelay()
+            self.stopUpdateSequenceWithQueryDelay()
         }
     }
     
