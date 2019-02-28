@@ -9,12 +9,14 @@
 import UIKit
 
 class MainVC: CustomViewController {
-
+    let chartNameLabel = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupView()
-        fetchApiData()
+//        fetchApiData()
+        setupChartName("BTC")
     }
     
     func fetchApiData() {
