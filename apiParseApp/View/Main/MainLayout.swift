@@ -15,8 +15,8 @@ extension MainVC {
         setupTopLabels()
         setupExchangeRateLabels()
         
-        setupUpdateRequestButton()
         setupCopyringsLabel()
+        setupUpdateRequestButton()
     }
     
     func setupBackgroundColor() {
@@ -103,14 +103,6 @@ extension MainVC {
     }
     //
     
-    func setupUpdateRequestButton() {
-        let backgroundImage = UIImage(named: "reload")
-        updateRequestButton.setImage(backgroundImage, for: .normal)
-//        updateRequestButton.setTitle(nil, for: .normal)
-        
-        self.updateRequestButtonAnchors()
-    }
-    
     func setupCopyringsLabel() {
         copyrightLabel.text = MainConstants.copyrights
         copyrightLabel.textColor = .white
@@ -119,5 +111,14 @@ extension MainVC {
         
         view.insertSubview(copyrightLabel, at: 0)
         self.copyrightLabelAnchors()
+    }
+    
+    func setupUpdateRequestButton() {
+        let backgroundImage = UIImage(named: "reload")
+        updateRequestButton.setImage(backgroundImage, for: .normal)
+        //        updateRequestButton.setTitle(nil, for: .normal)
+        
+        view.insertSubview(updateRequestButton, at: 0)
+        self.updateRequestButtonAnchors()
     }
 }

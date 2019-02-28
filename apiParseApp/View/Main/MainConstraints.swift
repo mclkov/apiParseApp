@@ -86,10 +86,6 @@ extension MainVC {
         gbpRateLabel.heightAnchor.constraint(equalToConstant: MainConstants.rateLabelHeight).isActive = true
     }
     
-    func updateRequestButtonAnchors() {
-//        updateRequestButton.topAnchor.constraint(equalTo: <#T##NSLayoutAnchor<NSLayoutYAxisAnchor>#>)
-    }
-    
     func copyrightLabelAnchors() {
         copyrightLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -97,5 +93,13 @@ extension MainVC {
         copyrightLabel.leadingAnchor.constraint(equalTo: chartNameLabel.leadingAnchor).isActive = true
         copyrightLabel.trailingAnchor.constraint(equalTo: chartNameLabel.trailingAnchor).isActive = true
         copyrightLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    }
+    
+    func updateRequestButtonAnchors() {
+        updateRequestButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        updateRequestButton.bottomAnchor.constraint(equalTo: copyrightLabel.topAnchor, constant: -10).isActive = true
+        updateRequestButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        updateRequestButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
 }
