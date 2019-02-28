@@ -18,4 +18,13 @@ extension MainVC {
         chartNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -sideBorderPadding).isActive = true
         chartNameLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
+    
+    func timeUpdatedLabelAnchors() {
+        timeUpdatedLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        timeUpdatedLabel.topAnchor.constraint(equalTo: chartNameLabel.bottomAnchor).isActive = true
+        timeUpdatedLabel.leadingAnchor.constraint(equalTo: chartNameLabel.leadingAnchor).isActive = true
+        timeUpdatedLabel.trailingAnchor.constraint(equalTo: chartNameLabel.trailingAnchor).isActive = true
+        timeUpdatedLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    }
 }

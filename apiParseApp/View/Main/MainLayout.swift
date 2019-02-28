@@ -19,7 +19,7 @@ extension MainVC {
     
     func setupChartName(_ name: String) {
         chartNameLabel.text = name
-        chartNameLabel.textColor = .white
+        chartNameLabel.textColor = ColorScheme.transparentGold
         chartNameLabel.font = UIFont.boldSystemFont(ofSize: 32)
         
         view.insertSubview(chartNameLabel, at: 0)
@@ -27,6 +27,11 @@ extension MainVC {
     }
     
     func setupTimeUpdated(time: String) {
+        timeUpdatedLabel.text = time
+        timeUpdatedLabel.textColor = ColorScheme.transparentWhite
+        timeUpdatedLabel.font = UIFont.boldSystemFont(ofSize: 14)
         
+        view.insertSubview(timeUpdatedLabel, at: 0)
+        self.timeUpdatedLabelAnchors()
     }
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class MainVC: CustomViewController {
     let chartNameLabel = UILabel()
+    let timeUpdatedLabel = UILabel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +19,7 @@ class MainVC: CustomViewController {
         self.setupView()
 //        fetchApiData()
         setupChartName("BTC")
+        setupTimeUpdated(time: "12/12/1990 00:00:00")
     }
     
     func fetchApiData() {
