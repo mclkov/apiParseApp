@@ -20,6 +20,9 @@ class MainVC: CustomViewController {
     let gbpRateLabel = UILabel()
     let eurRateLabel = UILabel()
     
+    let updateRequestButton = UIButton()
+    let copyrightLabel = UILabel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +30,7 @@ class MainVC: CustomViewController {
         self.setupView()
         
         fetchLocalStorageData()
-        fetchApiData()
+//        fetchApiData()
     }
     
     func fetchLocalStorageData() {
