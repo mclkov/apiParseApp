@@ -17,8 +17,7 @@ extension MainVC {
         view.backgroundColor = ColorScheme.darkBlue
     }
     
-    func setupChartName(_ name: String) {
-        chartNameLabel.text = name
+    func setupChartNameLabel() {
         chartNameLabel.textColor = ColorScheme.transparentGold
         chartNameLabel.font = UIFont.boldSystemFont(ofSize: 32)
         
@@ -26,8 +25,7 @@ extension MainVC {
         self.chartNameLabelAnchors()
     }
     
-    func setupTimeUpdated(time: String) {
-        timeUpdatedLabel.text = time
+    func setupTimeUpdatedLabel() {
         timeUpdatedLabel.textColor = ColorScheme.transparentWhite
         timeUpdatedLabel.font = UIFont.boldSystemFont(ofSize: 14)
         
@@ -35,53 +33,52 @@ extension MainVC {
         self.timeUpdatedLabelAnchors()
     }
     
-    func setupUsdSymbolLabel(symbol: String) {
-        usdSymbolLabel.text = symbol
+    
+    //
+    func setupUsdSymbolLabel() {
         usdSymbolLabel.textColor = .white
         
         view.insertSubview(usdSymbolLabel, at: 0)
         self.usdSymbolLabelAnchors()
     }
     
-    func setupUsdRateLabel(value: String) {
-        usdRateLabel.text = value
+    func setupUsdRateLabel() {
         usdRateLabel.textColor = .white
         
         view.insertSubview(usdRateLabel, at: 0)
         self.usdRateLabelAnchors()
     }
+    //
     
-    
-    
-    func setupEurSymbolLabel(symbol: String) {
-        eurSymbolLabel.text = symbol
+    //
+    func setupEurSymbolLabel() {
         eurSymbolLabel.textColor = .white
         
         view.insertSubview(eurSymbolLabel, at: 0)
         self.eurSymbolLabelAnchors()
     }
     
-    func setupEurRateLabel(value: String) {
-        eurRateLabel.text = value
+    func setupEurRateLabel() {
         eurRateLabel.textColor = .white
         
         view.insertSubview(eurRateLabel, at: 0)
         self.eurRateLabelAnchors()
     }
+    //
     
-    func setupGbpSymbolLabel(symbol: String) {
-        gbpSymbolLabel.text = symbol
+    //
+    func setupGbpSymbolLabel() {
         gbpSymbolLabel.textColor = .white
         
         view.insertSubview(gbpSymbolLabel, at: 0)
         self.gbpSymbolLabelAnchors()
     }
     
-    func setupGbpRateLabel(value: String) {
-        gbpRateLabel.text = value
+    func setupGbpRateLabel() {
         gbpRateLabel.textColor = .white
         
         view.insertSubview(gbpRateLabel, at: 0)
         self.gbpRateLabelAnchors()
     }
+    //
 }
