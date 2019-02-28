@@ -13,7 +13,7 @@ struct CurrencyJSON: Decodable {
     let symbol: String
     let rate: String
     let description: String
-    let rateFloat: Double
+    let rateFloat: Float
     
     private enum CodingKeys: String, CodingKey {
         case
