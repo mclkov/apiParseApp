@@ -14,4 +14,6 @@ struct MainConstants {
     static let rateLabelWidth: CGFloat = 20
     static let rateLabelTopOffset: CGFloat = 10
     static let copyrights = "Powered by CoinDesk"
+    
+    static let animationKey = "transform.rotation"
 }

@@ -10,12 +10,12 @@ import UIKit
 
 extension UIView {
     func rotate360Degrees(duration: CFTimeInterval = 3) {
-        let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        let rotateAnimation = CABasicAnimation(keyPath: MainConstants.animationKey)
         rotateAnimation.fromValue = 0.0
         rotateAnimation.toValue = CGFloat(Double.pi * 2)
         rotateAnimation.isRemovedOnCompletion = false
         rotateAnimation.duration = duration
         rotateAnimation.repeatCount=Float.infinity
-        self.layer.add(rotateAnimation, forKey: nil)
+        self.layer.add(rotateAnimation, forKey: MainConstants.animationKey)
     }
 }

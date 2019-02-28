@@ -30,17 +30,8 @@ class MainVC: CustomViewController {
         self.setupView()
         
         fetchLocalStorageData()
-//        fetchApiData()
     }
 
-    func startUpdateButtonSpinning() {
-        updateRequestButton.rotate360Degrees()
-    }
-    
-    @objc func updateRequestButtonPressed() {
-        startUpdateButtonSpinning()
-    }
-    
     func fetchLocalStorageData() {
         let storage = StorageService.shared
         
@@ -57,13 +48,29 @@ class MainVC: CustomViewController {
         gbpRateLabel.text = storage.gbpRate
     }
     
-    func fetchApiData() {
+    @objc func updateRequestButtonPressed() {
+        startUpdateButtonSpinning()
+        self.fetchApiData {
+            self.stopUpdateButtonSpinning()
+        }
+    }
+    
+    func startUpdateButtonSpinning() {
+        updateRequestButton.rotate360Degrees()
+    }
+    
+    func stopUpdateButtonSpinning() {
+        updateRequestButton.layer.removeAnimation(forKey: MainConstants.animationKey)
+    }
+    
+    func fetchApiData(completionHandler: @escaping () -> Void) {
         ApiService.shared.requestData { (data) in
             guard let jsonData = data else { return }
             
             DispatchQueue.main.async {
                 self.saveApiDataToLocalStorage(data: jsonData)
                 self.fetchLocalStorageData()
+                completionHandler()
             }
         }
     }
@@ -110,16 +117,6 @@ class MainVC: CustomViewController {
             print("Unknown currency in API response: ", currencyKey)
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
