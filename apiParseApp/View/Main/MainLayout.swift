@@ -53,7 +53,6 @@ extension MainVC {
     
     
     
-    
     func setupEurSymbolLabel(symbol: String) {
         eurSymbolLabel.text = symbol
         eurSymbolLabel.textColor = .white
@@ -68,5 +67,21 @@ extension MainVC {
         
         view.insertSubview(eurRateLabel, at: 0)
         self.eurRateLabelAnchors()
+    }
+    
+    func setupGbpSymbolLabel(symbol: String) {
+        gbpSymbolLabel.text = symbol
+        gbpSymbolLabel.textColor = .white
+        
+        view.insertSubview(gbpSymbolLabel, at: 0)
+        self.gbpSymbolLabelAnchors()
+    }
+    
+    func setupGbpRateLabel(value: String) {
+        gbpRateLabel.text = value
+        gbpRateLabel.textColor = .white
+        
+        view.insertSubview(gbpRateLabel, at: 0)
+        self.gbpRateLabelAnchors()
     }
 }

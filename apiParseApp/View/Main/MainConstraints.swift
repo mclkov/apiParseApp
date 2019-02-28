@@ -65,4 +65,24 @@ extension MainVC {
         eurRateLabel.trailingAnchor.constraint(equalTo: chartNameLabel.trailingAnchor).isActive = true
         eurRateLabel.heightAnchor.constraint(equalToConstant: MainConstants.rateLabelHeight).isActive = true
     }
+    
+    
+    
+    func gbpSymbolLabelAnchors() {
+        gbpSymbolLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        gbpSymbolLabel.topAnchor.constraint(equalTo: eurRateLabel.bottomAnchor, constant: MainConstants.rateLabelTopOffset).isActive = true
+        gbpSymbolLabel.leadingAnchor.constraint(equalTo: chartNameLabel.leadingAnchor).isActive = true
+        gbpSymbolLabel.widthAnchor.constraint(equalToConstant: MainConstants.rateLabelWidth).isActive = true
+        gbpSymbolLabel.heightAnchor.constraint(equalToConstant: MainConstants.rateLabelHeight).isActive = true
+    }
+    
+    func gbpRateLabelAnchors() {
+        gbpRateLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        gbpRateLabel.topAnchor.constraint(equalTo: gbpSymbolLabel.topAnchor).isActive = true
+        gbpRateLabel.leadingAnchor.constraint(equalTo: eurSymbolLabel.trailingAnchor).isActive = true
+        gbpRateLabel.trailingAnchor.constraint(equalTo: chartNameLabel.trailingAnchor).isActive = true
+        gbpRateLabel.heightAnchor.constraint(equalToConstant: MainConstants.rateLabelHeight).isActive = true
+    }
 }

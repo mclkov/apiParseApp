@@ -34,6 +34,9 @@ class MainVC: CustomViewController {
         
         setupEurSymbolLabel(symbol: "#")
         setupEurRateLabel(value: "120")
+        
+        setupGbpSymbolLabel(symbol: "@")
+        setupGbpRateLabel(value: "130")
     }
     
     func fetchApiData() {
