@@ -25,7 +25,26 @@ class MainVC: CustomViewController {
         super.viewDidLoad()
         
         self.setupView()
-        fetchApiData()
+        
+        
+//        fetchApiData()
+        fetchLocalStorageData()
+    }
+    
+    func fetchLocalStorageData() {
+        let storage = StorageService.shared
+        
+        chartNameLabel.text = storage.chartName
+        timeUpdatedLabel.text = storage.timeUpdated
+        
+        usdSymbolLabel.text = storage.usdSymbol
+        usdRateLabel.text = storage.usdRate
+        
+        eurSymbolLabel.text = storage.eurSymbol
+        eurRateLabel.text = storage.eurRate
+        
+        gbpSymbolLabel.text = storage.gbpSymbol
+        gbpRateLabel.text = storage.gbpRate
     }
     
     func fetchApiData() {
