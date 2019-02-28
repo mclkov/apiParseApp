@@ -57,6 +57,50 @@ class MainVC: CustomViewController {
         }
     }
     
+    func saveApiDataToLocalStorage(data: ApiResponseJSON) {
+        let storage = StorageService.shared
+        
+        var timeUpdated = data.time.updated
+        if let localTime = data.time.updatedISO.getLocalTimeStringFrom() {
+            timeUpdated = localTime
+        }
+        
+        storage.chartName = data.chartName
+        storage.timeUpdated = timeUpdated
+        
+        saveExchangeRatesToLocalStorage(currencies: data.bpi)
+    }
+    
+    func saveExchangeRatesToLocalStorage(currencies: [String: CurrencyJSON]) {
+        for (key, value) in currencies {
+            saveExchangeRateFor(currencyKey: key, currencyInfo: value)
+        }
+    }
+    
+    func saveExchangeRateFor(currencyKey: String, currencyInfo: CurrencyJSON) {
+        let storage = StorageService.shared
+        
+        var currencySymbol = ""
+        if let htmlToUtf8 = currencyInfo.symbol.htmlToUtf8() {
+            currencySymbol = htmlToUtf8
+        }
+        
+        switch currencyKey {
+        case "USD":
+            storage.usdSymbol = currencySymbol
+            storage.usdRate = currencyInfo.rate
+        case "GBP":
+            storage.gbpSymbol = currencySymbol
+            storage.gbpRate = currencyInfo.rate
+        case "EUR":
+            storage.eurSymbol = currencySymbol
+            storage.eurRate = currencyInfo.rate
+        default:
+            print("Unknown currency in API response: ", currencyKey)
+        }
+    }
+    
+    
     func showData(data: ApiResponseJSON) {
         var timeUpdated = data.time.updated
         if let localTime = data.time.updatedISO.getLocalTimeStringFrom() {
@@ -66,13 +110,7 @@ class MainVC: CustomViewController {
         chartNameLabel.text = data.chartName
         timeUpdatedLabel.text = timeUpdated
         
-        processExchangeRates(currencies: data.bpi)
-    }
-    
-    func processExchangeRates(currencies: [String: CurrencyJSON]) {
-        for (key, value) in currencies {
-            showExchangeRatesFor(currencyKey: key, currencyInfo: value)
-        }
+//        processExchangeRates(currencies: data.bpi)
     }
     
     func showExchangeRatesFor(currencyKey: String, currencyInfo: CurrencyJSON) {
