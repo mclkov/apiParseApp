@@ -39,8 +39,14 @@ class MainVC: CustomViewController {
     }
     
     func showData(data: ApiResponseJSON) {
+        var timeUpdated = data.time.updated
+        if let localTime = data.time.updatedISO.getLocalTimeStringFrom() {
+            timeUpdated = localTime
+        }
+        
         chartNameLabel.text = data.chartName
-        timeUpdatedLabel.text =  data.time.updated
+        timeUpdatedLabel.text = timeUpdated
+        
         processExchangeRates(currencies: data.bpi)
     }
     

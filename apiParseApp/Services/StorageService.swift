@@ -24,6 +24,4 @@ class StorageService {
             return defaults.string(forKey: StorageConstants.timeUpdatedKey) ?? noDataMessage
         }
     }
-    
-    
 }

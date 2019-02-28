@@ -27,6 +27,7 @@
 		606DBD6F2227E77600621EF1 /* StoredValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD6E2227E77600621EF1 /* StoredValues.swift */; };
 		606DBD722227E82100621EF1 /* CurrencyRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD712227E82100621EF1 /* CurrencyRates.swift */; };
 		606DBD742227E98E00621EF1 /* StorageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD732227E98E00621EF1 /* StorageConstants.swift */; };
+		606DBD762227F37900621EF1 /* String+dateConvertation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD752227F37900621EF1 /* String+dateConvertation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		606DBD6E2227E77600621EF1 /* StoredValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredValues.swift; sourceTree = "<group>"; };
 		606DBD712227E82100621EF1 /* CurrencyRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRates.swift; sourceTree = "<group>"; };
 		606DBD732227E98E00621EF1 /* StorageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageConstants.swift; sourceTree = "<group>"; };
+		606DBD752227F37900621EF1 /* String+dateConvertation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+dateConvertation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				606DBD4A2226FF5500621EF1 /* MainConstants.swift */,
 				606DBD6A2227CB1700621EF1 /* String+htmlToUtf8.swift */,
 				606DBD732227E98E00621EF1 /* StorageConstants.swift */,
+				606DBD752227F37900621EF1 /* String+dateConvertation.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				606DBD4B2226FF5500621EF1 /* MainConstants.swift in Sources */,
 				606DBD742227E98E00621EF1 /* StorageConstants.swift in Sources */,
+				606DBD762227F37900621EF1 /* String+dateConvertation.swift in Sources */,
 				606DBD482226FED400621EF1 /* WebRequestImpl.swift in Sources */,
 				606DBD6F2227E77600621EF1 /* StoredValues.swift in Sources */,
 				606DBD6022279EBF00621EF1 /* MainLayout.swift in Sources */,
