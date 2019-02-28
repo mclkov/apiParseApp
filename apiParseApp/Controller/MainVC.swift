@@ -26,9 +26,8 @@ class MainVC: CustomViewController {
         
         self.setupView()
         
-        
-//        fetchApiData()
         fetchLocalStorageData()
+        fetchApiData()
     }
     
     func fetchLocalStorageData() {
@@ -52,7 +51,8 @@ class MainVC: CustomViewController {
             guard let jsonData = data else { return }
             
             DispatchQueue.main.async {
-                self.showData(data: jsonData)
+                self.saveApiDataToLocalStorage(data: jsonData)
+                self.fetchLocalStorageData()
             }
         }
     }
@@ -99,6 +99,20 @@ class MainVC: CustomViewController {
             print("Unknown currency in API response: ", currencyKey)
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     func showData(data: ApiResponseJSON) {
