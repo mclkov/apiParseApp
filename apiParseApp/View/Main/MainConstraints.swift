@@ -113,4 +113,8 @@ extension MainVC {
 
         buttonAvailabilityLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
+    
+    func calculatorButtonAnchors() {
+        calculatorButton.translatesAutoresizingMaskIntoConstraints = false
+    }
 }

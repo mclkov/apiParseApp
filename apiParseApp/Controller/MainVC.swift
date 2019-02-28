@@ -20,8 +20,9 @@ class MainVC: CustomViewController {
     let gbpRateLabel = UILabel()
     let eurRateLabel = UILabel()
     
-    let updateRequestButton = UIButton()
     let buttonAvailabilityLabel = UILabel()
+    let updateRequestButton = UIButton()
+    let calculatorButton = UIButton()
     let copyrightLabel = UILabel()
     
     override func viewDidLoad() {
@@ -46,6 +47,10 @@ class MainVC: CustomViewController {
         
         gbpSymbolLabel.text = storage.gbpSymbol
         gbpRateLabel.text = storage.gbpRate
+    }
+    
+    @objc func presentCalculatorVC() {
+        print("Coming soon")
     }
     
     @objc func updateRequestButtonPressed() {
