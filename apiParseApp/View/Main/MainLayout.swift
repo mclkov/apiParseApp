@@ -22,16 +22,20 @@ extension MainVC {
         updateRequestButton.isEnabled = false
     }
     
+    func stopUpdateSequenceWithDelay() {
+        stopUpdateButtonSpinning()
+        DispatchQueue.main.asyncAfter(deadline: .now() + MainConstants.delayInSecondsBetweenQueries) {
+            self.enableUpdateButton()
+        }
+    }
+    
     func stopUpdateSequence() {
         stopUpdateButtonSpinning()
+        self.enableUpdateButton()
     }
     
     func stopUpdateButtonSpinning() {
         updateRequestButton.layer.removeAnimation(forKey: MainConstants.animationKey)
-        
-        DispatchQueue.global().asyncAfter(deadline: .now() + MainConstants.delayInSecondsBetweenQueries) {
-            self.enableUpdateButton()
-        }
     }
     
     func enableUpdateButton() {

@@ -26,8 +26,14 @@ class ApiService {
         DispatchQueue.global(qos: .background).async {
             let request: WebRequest = WebRequestImpl(website: MainConstants.apiUrl, method: .GET)
             request.execute { (result) in
-                guard let data = result else { return }
-                guard let jsonData = self.parseJSON(data: data) else { return }
+                guard let data = result else {
+                    completionHandler(nil)
+                    return
+                }
+                guard let jsonData = self.parseJSON(data: data) else {
+                    completionHandler(nil)
+                    return
+                }
                 
                 completionHandler(jsonData)
             }

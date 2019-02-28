@@ -50,19 +50,29 @@ class MainVC: CustomViewController {
     @objc func updateRequestButtonPressed() {
         startUpdateSequence()
         self.fetchApiData {
-            self.stopUpdateButtonSpinning()
+            self.stopUpdateSequenceWithDelay()
         }
     }
     
     func fetchApiData(completionHandler: @escaping () -> Void) {
         ApiService.shared.requestData { (data) in
-            guard let jsonData = data else { return }
+            guard let jsonData = data else {
+                self.connectionIssueCase()
+                return
+            }
             
             DispatchQueue.main.async {
                 self.saveApiDataToLocalStorage(data: jsonData)
                 self.fetchLocalStorageData()
                 completionHandler()
             }
+        }
+    }
+    
+    func connectionIssueCase() {
+        DispatchQueue.main.async {
+            self.showAlert(title: "Connection issue", message: "The internet connection appears to be offile")
+            self.stopUpdateSequence()
         }
     }
     
