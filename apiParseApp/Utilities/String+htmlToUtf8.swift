@@ -6,6 +6,8 @@
 //  Copyright © 2019 McL. All rights reserved.
 //
 
+import Foundation
+
 extension String {
     func htmlToUtf8() -> String? {
         let encodedString = self
