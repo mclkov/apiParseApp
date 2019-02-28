@@ -9,11 +9,11 @@
 import Foundation
 
 struct CurrencyJSON: Decodable {
-    let code: String = ""
-    let symbol: String = ""
-    let rate: String = ""
-    let description: String = ""
-    let rateFloat: Double = 0.0
+    let code: String
+    let symbol: String
+    let rate: String
+    let description: String
+    let rateFloat: Double
     
     private enum CodingKeys: String, CodingKey {
         case

@@ -43,6 +43,7 @@ class MainVC: CustomViewController {
         setupChartName(data.chartName)
         setupTimeUpdated(time: data.time.updated)
         
+        print(data.bpi)
         processExchangeRates(currencies: data.bpi)
         
 //        setupUsdSymbolLabel(symbol: data.bpi[0])
@@ -50,19 +51,38 @@ class MainVC: CustomViewController {
 //
 //        setupEurSymbolLabel(symbol: "#")
 //        setupEurRateLabel(value: "120")
-//
+////
 //        setupGbpSymbolLabel(symbol: "@")
 //        setupGbpRateLabel(value: "130")
     }
     
     func processExchangeRates(currencies: [String: CurrencyJSON]) {
         for (key, value) in currencies {
-            print(key)
+            showExchangeRatesFor(currencyKey: key, currencyInfo: value)
         }
     }
     
-    func showExchangeRatesFor(currency: CurrencyJSON) {
+    func showExchangeRatesFor(currencyKey: String, currencyInfo: CurrencyJSON) {
+        var currencySymbol = ""
+        if let htmlToUtf8 = currencyInfo.symbol.htmlToUtf8() {
+            currencySymbol = htmlToUtf8
+        }
         
+        switch currencyKey {
+        case "USD":
+            setupUsdSymbolLabel(symbol: currencySymbol)
+            setupUsdRateLabel(value: currencyInfo.rate)
+//        case "GBP":
+//            setupGbpSymbolLabel(symbol: currencySymbol)
+//            setupGbpRateLabel(value: currencyInfo.rate)
+//        case "EUR":
+//            setupEurSymbolLabel(symbol: currencySymbol)
+//            setupEurRateLabel(value: currencyInfo.rate)
+
+
+        default:
+            print("Unknown currency in API response: ", currencyKey)
+        }
     }
 }
 
