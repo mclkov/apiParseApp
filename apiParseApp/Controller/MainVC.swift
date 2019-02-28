@@ -31,22 +31,38 @@ class MainVC: CustomViewController {
     func fetchApiData() {
         ApiService.shared.requestData { (data) in
             guard let jsonData = data else { return }
-            self.showData(data: jsonData)
+            
+            DispatchQueue.main.async {
+                self.showData(data: jsonData)
+            }
         }
     }
     
     func showData(data: ApiResponseJSON) {
+        
         setupChartName(data.chartName)
         setupTimeUpdated(time: data.time.updated)
         
-        setupUsdSymbolLabel(symbol: "$")
-        setupUsdRateLabel(value: "100")
+        processExchangeRates(currencies: data.bpi)
         
-        setupEurSymbolLabel(symbol: "#")
-        setupEurRateLabel(value: "120")
+//        setupUsdSymbolLabel(symbol: data.bpi[0])
+//        setupUsdRateLabel(value: "100")
+//
+//        setupEurSymbolLabel(symbol: "#")
+//        setupEurRateLabel(value: "120")
+//
+//        setupGbpSymbolLabel(symbol: "@")
+//        setupGbpRateLabel(value: "130")
+    }
+    
+    func processExchangeRates(currencies: [String: CurrencyJSON]) {
+        for (key, value) in currencies {
+            print(key)
+        }
+    }
+    
+    func showExchangeRatesFor(currency: CurrencyJSON) {
         
-        setupGbpSymbolLabel(symbol: "@")
-        setupGbpRateLabel(value: "130")
     }
 }
 
