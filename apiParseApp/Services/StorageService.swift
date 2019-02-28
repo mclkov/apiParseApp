@@ -55,11 +55,11 @@ class StorageService {
     
     var usdRateFloat: Float {
         get {
-            return defaults.string(forKey: StorageConstants.usdRateKey) ?? noDataMessage
+            return defaults.float(forKey: StorageConstants.usdRateFloatKey)
         }
         
         set {
-            defaults.set(newValue, forKey: StorageConstants.usdRateKey)
+            defaults.set(newValue, forKey: StorageConstants.usdRateFloatKey)
         }
     }
     
@@ -83,6 +83,16 @@ class StorageService {
         }
     }
     
+    var eurRateFloat: Float {
+        get {
+            return defaults.float(forKey: StorageConstants.eurRateFloatKey)
+        }
+        
+        set {
+            defaults.set(newValue, forKey: StorageConstants.eurRateFloatKey)
+        }
+    }
+    
     var gbpSymbol: String {
         get {
             return defaults.string(forKey: StorageConstants.gbpSymbolKey) ?? ""
@@ -100,6 +110,16 @@ class StorageService {
         
         set {
             defaults.set(newValue, forKey: StorageConstants.gbpRateKey)
+        }
+    }
+    
+    var gbpRateFloat: Float {
+        get {
+            return defaults.float(forKey: StorageConstants.gbpRateFloatKey)
+        }
+        
+        set {
+            defaults.set(newValue, forKey: StorageConstants.gbpRateFloatKey)
         }
     }
 }
