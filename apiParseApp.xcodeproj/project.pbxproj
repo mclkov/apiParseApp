@@ -19,6 +19,7 @@
 		606DBD512227061B00621EF1 /* TimeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD502227061B00621EF1 /* TimeJSON.swift */; };
 		606DBD54222706D200621EF1 /* CurrencyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD53222706D200621EF1 /* CurrencyJSON.swift */; };
 		606DBD6022279EBF00621EF1 /* MainLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD5F22279EBF00621EF1 /* MainLayout.swift */; };
+		606DBD622227A54500621EF1 /* MainConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD612227A54500621EF1 /* MainConstraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		606DBD502227061B00621EF1 /* TimeJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeJSON.swift; sourceTree = "<group>"; };
 		606DBD53222706D200621EF1 /* CurrencyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyJSON.swift; sourceTree = "<group>"; };
 		606DBD5F22279EBF00621EF1 /* MainLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLayout.swift; sourceTree = "<group>"; };
+		606DBD612227A54500621EF1 /* MainConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +123,8 @@
 		606DBD432226FD5400621EF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				606DBD632227A55500621EF1 /* Main */,
 				606DBD2B2226F98700621EF1 /* LaunchScreen.storyboard */,
-				606DBD5F22279EBF00621EF1 /* MainLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,6 +162,15 @@
 				606DBD53222706D200621EF1 /* CurrencyJSON.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		606DBD632227A55500621EF1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				606DBD5F22279EBF00621EF1 /* MainLayout.swift */,
+				606DBD612227A54500621EF1 /* MainConstraints.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 				606DBD232226F98700621EF1 /* AppDelegate.swift in Sources */,
 				606DBD54222706D200621EF1 /* CurrencyJSON.swift in Sources */,
 				606DBD512227061B00621EF1 /* TimeJSON.swift in Sources */,
+				606DBD622227A54500621EF1 /* MainConstraints.swift in Sources */,
 				606DBD462226FE4200621EF1 /* ApiService.swift in Sources */,
 				606DBD4E222705D000621EF1 /* ApiResponseJSON.swift in Sources */,
 			);
