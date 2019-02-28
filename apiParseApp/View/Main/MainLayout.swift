@@ -17,6 +17,7 @@ extension MainVC {
         
         setupCopyringsLabel()
         setupUpdateRequestButton()
+        setupCalculatorButton()
         setupButtonAvailabilityLabel()
     }
     
@@ -75,6 +76,15 @@ extension MainVC {
         self.updateRequestButtonAnchors()
     }
     
+    func setupCalculatorButton() {
+        let backgroundImage = UIImage(named: "calculator")
+        calculatorButton.setImage(backgroundImage, for: .normal)
+        calculatorButton.addTarget(self, action: #selector(self.presentCalculatorVC), for: .touchUpInside)
+        
+        view.insertSubview(calculatorButton, at: 0)
+        self.calculatorButtonAnchors()
+    }
+    
     func setupButtonAvailabilityLabel() {
         buttonAvailabilityLabel.text = MainConstants.buttonAvailability
         buttonAvailabilityLabel.textColor = .white
@@ -83,14 +93,5 @@ extension MainVC {
         
         view.insertSubview(buttonAvailabilityLabel, at: 0)
         self.buttonAvailabilityLabelAnchors()
-    }
-    
-    func setupCalculatorButton() {
-        let backgroundImage = UIImage(named: "calculator")
-        calculatorButton.setImage(backgroundImage, for: .normal)
-        calculatorButton.addTarget(self, action: #selector(self.presentCalculatorVC), for: .touchUpInside)
-        
-        view.insertSubview(calculatorButton, at: 0)
-        self.calculatorButtonAnchors()
     }
 }

@@ -99,7 +99,7 @@ extension MainVC {
         updateRequestButton.translatesAutoresizingMaskIntoConstraints = false
         
         updateRequestButton.bottomAnchor.constraint(equalTo: copyrightLabel.topAnchor, constant: -10).isActive = true
-        updateRequestButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        updateRequestButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -35).isActive = true
         updateRequestButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
         updateRequestButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
@@ -116,5 +116,10 @@ extension MainVC {
     
     func calculatorButtonAnchors() {
         calculatorButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        calculatorButton.bottomAnchor.constraint(equalTo: copyrightLabel.topAnchor, constant: -10).isActive = true
+        calculatorButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 35).isActive = true
+        calculatorButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        calculatorButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
 }

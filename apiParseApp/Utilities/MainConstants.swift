@@ -14,7 +14,7 @@ struct MainConstants {
     static let rateLabelWidth: CGFloat = 20
     static let rateLabelTopOffset: CGFloat = 10
     static let copyrights = "Powered by CoinDesk"
-    static let buttonAvailability = "Button will be available after 1 minute"
+    static let buttonAvailability = "Updating will be available after 1 minute"
     
     static let animationKey = "transform.rotation"
     static let delayInSecondsBetweenQueries: Double = 60.0
