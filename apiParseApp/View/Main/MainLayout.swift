@@ -14,7 +14,7 @@ extension MainVC {
     }
     
     func setupBackgroundColor() {
-        view.backgroundColor = .green
+        view.backgroundColor = ColorScheme.darkBlue
     }
     
     

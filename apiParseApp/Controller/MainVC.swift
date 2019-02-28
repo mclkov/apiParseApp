@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainVC: UIViewController {
+class MainVC: CustomViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

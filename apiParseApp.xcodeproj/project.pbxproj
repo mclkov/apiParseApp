@@ -20,6 +20,8 @@
 		606DBD54222706D200621EF1 /* CurrencyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD53222706D200621EF1 /* CurrencyJSON.swift */; };
 		606DBD6022279EBF00621EF1 /* MainLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD5F22279EBF00621EF1 /* MainLayout.swift */; };
 		606DBD622227A54500621EF1 /* MainConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD612227A54500621EF1 /* MainConstraints.swift */; };
+		606DBD652227A5B700621EF1 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD642227A5B700621EF1 /* ColorScheme.swift */; };
+		606DBD672227A75000621EF1 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD662227A75000621EF1 /* CustomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		606DBD53222706D200621EF1 /* CurrencyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyJSON.swift; sourceTree = "<group>"; };
 		606DBD5F22279EBF00621EF1 /* MainLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLayout.swift; sourceTree = "<group>"; };
 		606DBD612227A54500621EF1 /* MainConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstraints.swift; sourceTree = "<group>"; };
+		606DBD642227A5B700621EF1 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		606DBD662227A75000621EF1 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 			children = (
 				606DBD222226F98700621EF1 /* AppDelegate.swift */,
 				606DBD242226F98700621EF1 /* MainVC.swift */,
+				606DBD662227A75000621EF1 /* CustomViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				606DBD632227A55500621EF1 /* Main */,
+				606DBD642227A5B700621EF1 /* ColorScheme.swift */,
 				606DBD2B2226F98700621EF1 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -276,9 +282,11 @@
 				606DBD4B2226FF5500621EF1 /* MainConstants.swift in Sources */,
 				606DBD482226FED400621EF1 /* WebRequestImpl.swift in Sources */,
 				606DBD6022279EBF00621EF1 /* MainLayout.swift in Sources */,
+				606DBD672227A75000621EF1 /* CustomViewController.swift in Sources */,
 				606DBD252226F98700621EF1 /* MainVC.swift in Sources */,
 				606DBD232226F98700621EF1 /* AppDelegate.swift in Sources */,
 				606DBD54222706D200621EF1 /* CurrencyJSON.swift in Sources */,
+				606DBD652227A5B700621EF1 /* ColorScheme.swift in Sources */,
 				606DBD512227061B00621EF1 /* TimeJSON.swift in Sources */,
 				606DBD622227A54500621EF1 /* MainConstraints.swift in Sources */,
 				606DBD462226FE4200621EF1 /* ApiService.swift in Sources */,
