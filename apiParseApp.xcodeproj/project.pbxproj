@@ -91,6 +91,7 @@
 		606DBD212226F98700621EF1 /* apiParseApp */ = {
 			isa = PBXGroup;
 			children = (
+				606DBD5E22279DB100621EF1 /* View */,
 				606DBD492226FF4100621EF1 /* Utilities */,
 				606DBD4C222705BA00621EF1 /* Model */,
 				606DBD442226FDDC00621EF1 /* Services */,
@@ -171,6 +172,14 @@
 				606DBD5C22270C4C00621EF1 /* CurrencyListJSON.swift */,
 			);
 			path = BitcoinPriceIndex;
+			sourceTree = "<group>";
+		};
+		606DBD5E22279DB100621EF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
