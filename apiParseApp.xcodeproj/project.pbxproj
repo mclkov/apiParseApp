@@ -23,6 +23,10 @@
 		606DBD652227A5B700621EF1 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD642227A5B700621EF1 /* ColorScheme.swift */; };
 		606DBD672227A75000621EF1 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD662227A75000621EF1 /* CustomViewController.swift */; };
 		606DBD6B2227CB1700621EF1 /* String+htmlToUtf8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD6A2227CB1700621EF1 /* String+htmlToUtf8.swift */; };
+		606DBD6D2227E6DC00621EF1 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD6C2227E6DC00621EF1 /* StorageService.swift */; };
+		606DBD6F2227E77600621EF1 /* StoredValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD6E2227E77600621EF1 /* StoredValues.swift */; };
+		606DBD722227E82100621EF1 /* CurrencyRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD712227E82100621EF1 /* CurrencyRates.swift */; };
+		606DBD742227E98E00621EF1 /* StorageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD732227E98E00621EF1 /* StorageConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		606DBD642227A5B700621EF1 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		606DBD662227A75000621EF1 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		606DBD6A2227CB1700621EF1 /* String+htmlToUtf8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+htmlToUtf8.swift"; sourceTree = "<group>"; };
+		606DBD6C2227E6DC00621EF1 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		606DBD6E2227E77600621EF1 /* StoredValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredValues.swift; sourceTree = "<group>"; };
+		606DBD712227E82100621EF1 /* CurrencyRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRates.swift; sourceTree = "<group>"; };
+		606DBD732227E98E00621EF1 /* StorageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +150,7 @@
 			children = (
 				606DBD452226FE4200621EF1 /* ApiService.swift */,
 				606DBD472226FED400621EF1 /* WebRequestImpl.swift */,
+				606DBD6C2227E6DC00621EF1 /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -151,6 +160,7 @@
 			children = (
 				606DBD4A2226FF5500621EF1 /* MainConstants.swift */,
 				606DBD6A2227CB1700621EF1 /* String+htmlToUtf8.swift */,
+				606DBD732227E98E00621EF1 /* StorageConstants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -158,6 +168,7 @@
 		606DBD4C222705BA00621EF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				606DBD702227E7E400621EF1 /* Storage */,
 				606DBD4F2227060B00621EF1 /* API */,
 				606DBD4D222705D000621EF1 /* ApiResponseJSON.swift */,
 			);
@@ -180,6 +191,15 @@
 				606DBD612227A54500621EF1 /* MainConstraints.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		606DBD702227E7E400621EF1 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				606DBD6E2227E77600621EF1 /* StoredValues.swift */,
+				606DBD712227E82100621EF1 /* CurrencyRates.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,18 +303,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				606DBD4B2226FF5500621EF1 /* MainConstants.swift in Sources */,
+				606DBD742227E98E00621EF1 /* StorageConstants.swift in Sources */,
 				606DBD482226FED400621EF1 /* WebRequestImpl.swift in Sources */,
+				606DBD6F2227E77600621EF1 /* StoredValues.swift in Sources */,
 				606DBD6022279EBF00621EF1 /* MainLayout.swift in Sources */,
 				606DBD672227A75000621EF1 /* CustomViewController.swift in Sources */,
 				606DBD252226F98700621EF1 /* MainVC.swift in Sources */,
 				606DBD6B2227CB1700621EF1 /* String+htmlToUtf8.swift in Sources */,
 				606DBD232226F98700621EF1 /* AppDelegate.swift in Sources */,
+				606DBD722227E82100621EF1 /* CurrencyRates.swift in Sources */,
 				606DBD54222706D200621EF1 /* CurrencyJSON.swift in Sources */,
 				606DBD652227A5B700621EF1 /* ColorScheme.swift in Sources */,
 				606DBD512227061B00621EF1 /* TimeJSON.swift in Sources */,
 				606DBD622227A54500621EF1 /* MainConstraints.swift in Sources */,
 				606DBD462226FE4200621EF1 /* ApiService.swift in Sources */,
 				606DBD4E222705D000621EF1 /* ApiResponseJSON.swift in Sources */,
+				606DBD6D2227E6DC00621EF1 /* StorageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
