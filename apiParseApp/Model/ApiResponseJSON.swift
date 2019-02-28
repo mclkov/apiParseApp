@@ -12,5 +12,5 @@ struct ApiResponseJSON: Decodable {
     let time: TimeJSON
     let disclaimer: String
     let chartName: String
-    let bpi: [String: CurrencyJSON]
+    let bpi: [String: CurrencyJSON] // Bitcoin Price Index
 }
