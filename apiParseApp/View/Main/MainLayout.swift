@@ -50,4 +50,23 @@ extension MainVC {
         view.insertSubview(usdRateLabel, at: 0)
         self.usdRateLabelAnchors()
     }
+    
+    
+    
+    
+    func setupEurSymbolLabel(symbol: String) {
+        eurSymbolLabel.text = symbol
+        eurSymbolLabel.textColor = .white
+        
+        view.insertSubview(eurSymbolLabel, at: 0)
+        self.eurSymbolLabelAnchors()
+    }
+    
+    func setupEurRateLabel(value: String) {
+        eurRateLabel.text = value
+        eurRateLabel.textColor = .white
+        
+        view.insertSubview(eurRateLabel, at: 0)
+        self.eurRateLabelAnchors()
+    }
 }

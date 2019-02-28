@@ -31,6 +31,9 @@ class MainVC: CustomViewController {
         
         setupUsdSymbolLabel(symbol: "$")
         setupUsdRateLabel(value: "100")
+        
+        setupEurSymbolLabel(symbol: "#")
+        setupEurRateLabel(value: "120")
     }
     
     func fetchApiData() {
