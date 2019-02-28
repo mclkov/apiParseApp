@@ -8,12 +8,12 @@
 
 import Foundation
 
-class CurrencyJSON: Decodable {
-    var code: String = ""
-    var symbol: String = ""
-    var rate: String = ""
-    var description: String = ""
-    var rateFloat: Double = 0.0
+struct CurrencyJSON: Decodable {
+    let code: String = ""
+    let symbol: String = ""
+    let rate: String = ""
+    let description: String = ""
+    let rateFloat: Double = 0.0
     
     private enum CodingKeys: String, CodingKey {
         case
