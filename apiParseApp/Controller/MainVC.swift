@@ -21,7 +21,7 @@ class MainVC: CustomViewController {
     let eurRateLabel = UILabel()
     
     let updateRequestButton = UIButton()
-    let buttonAvailability = UILabel()
+    let buttonAvailabilityLabel = UILabel()
     let copyrightLabel = UILabel()
     
     override func viewDidLoad() {
@@ -34,10 +34,6 @@ class MainVC: CustomViewController {
 
     func fetchLocalStorageData() {
         let storage = StorageService.shared
-        
-        print(storage.eurRateFloat)
-        print(storage.gbpRateFloat)
-        print(storage.usdRateFloat)
         
         chartNameLabel.text = storage.chartName
         timeUpdatedLabel.text = storage.timeUpdated

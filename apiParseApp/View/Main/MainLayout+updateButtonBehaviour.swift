@@ -20,7 +20,7 @@ extension MainVC {
     
     func disableUpdateButton() {
         updateRequestButton.isEnabled = false
-        buttonAvailability.isHidden = false
+        buttonAvailabilityLabel.isHidden = false
     }
     
     func stopUpdateSequenceWithQueryDelay() {
@@ -41,6 +41,6 @@ extension MainVC {
     
     func enableUpdateButton() {
         updateRequestButton.isEnabled = true
-        buttonAvailability.isHidden = true
+        buttonAvailabilityLabel.isHidden = true
     }
 }

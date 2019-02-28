@@ -76,12 +76,12 @@ extension MainVC {
     }
     
     func setupButtonAvailabilityLabel() {
-        buttonAvailability.text = MainConstants.buttonAvailability
-        buttonAvailability.textColor = .white
+        buttonAvailabilityLabel.text = MainConstants.buttonAvailability
+        buttonAvailabilityLabel.textColor = .white
         copyrightLabel.textAlignment = .center
-        buttonAvailability.font = UIFont.boldSystemFont(ofSize: 12)
+        buttonAvailabilityLabel.font = UIFont.boldSystemFont(ofSize: 12)
         
-        view.insertSubview(buttonAvailability, at: 0)
+        view.insertSubview(buttonAvailabilityLabel, at: 0)
         self.buttonAvailabilityLabelAnchors()
     }
 }

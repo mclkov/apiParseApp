@@ -105,12 +105,12 @@ extension MainVC {
     }
     
     func buttonAvailabilityLabelAnchors() {
-        buttonAvailability.translatesAutoresizingMaskIntoConstraints = false
-        buttonAvailability.isHidden = true
+        buttonAvailabilityLabel.translatesAutoresizingMaskIntoConstraints = false
+        buttonAvailabilityLabel.isHidden = true
         
-        buttonAvailability.bottomAnchor.constraint(equalTo: updateRequestButton.topAnchor, constant: -10).isActive = true
-        buttonAvailability.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        buttonAvailabilityLabel.bottomAnchor.constraint(equalTo: updateRequestButton.topAnchor, constant: -10).isActive = true
+        buttonAvailabilityLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 
-        buttonAvailability.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        buttonAvailabilityLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
 }
