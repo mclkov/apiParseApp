@@ -8,40 +8,7 @@
 
 import UIKit
 
-extension MainVC {
-    func startUpdateSequence() {
-        startUpdateButtonSpinning()
-        disableUpdateButton()
-    }
-    
-    func startUpdateButtonSpinning() {
-        updateRequestButton.rotate360Degrees()
-    }
-    
-    func disableUpdateButton() {
-        updateRequestButton.isEnabled = false
-    }
-    
-    func stopUpdateSequenceWithQueryDelay() {
-        stopUpdateButtonSpinning()
-        DispatchQueue.main.asyncAfter(deadline: .now() + MainConstants.delayInSecondsBetweenQueries) {
-            self.enableUpdateButton()
-        }
-    }
-    
-    func stopUpdateSequence() {
-        stopUpdateButtonSpinning()
-        self.enableUpdateButton()
-    }
-    
-    func stopUpdateButtonSpinning() {
-        updateRequestButton.layer.removeAnimation(forKey: MainConstants.animationKey)
-    }
-    
-    func enableUpdateButton() {
-        updateRequestButton.isEnabled = true
-    }
-    
+extension MainVC {    
     func setupView() {
         setupBackgroundColor()
         
@@ -50,6 +17,7 @@ extension MainVC {
         
         setupCopyringsLabel()
         setupUpdateRequestButton()
+        setupButtonAvailabilityLabel()
     }
     
     func setupBackgroundColor() {
@@ -105,5 +73,15 @@ extension MainVC {
         
         view.insertSubview(updateRequestButton, at: 0)
         self.updateRequestButtonAnchors()
+    }
+    
+    func setupButtonAvailabilityLabel() {
+        buttonAvailability.text = MainConstants.buttonAvailability
+        buttonAvailability.textColor = .white
+        copyrightLabel.textAlignment = .center
+        buttonAvailability.font = UIFont.boldSystemFont(ofSize: 12)
+        
+        view.insertSubview(buttonAvailability, at: 0)
+        self.buttonAvailabilityLabelAnchors()
     }
 }

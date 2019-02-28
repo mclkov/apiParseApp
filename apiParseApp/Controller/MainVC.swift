@@ -76,7 +76,7 @@ class MainVC: CustomViewController {
     
     func connectionIssueCase() {
         DispatchQueue.main.async {
-            self.showAlert(title: "Connection issue", message: "The internet connection appears to be offile")
+            self.showAlert(title: "Connection issue", message: "The internet connection appears to be offline")
             self.stopUpdateSequence()
         }
     }

@@ -103,4 +103,14 @@ extension MainVC {
         updateRequestButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
         updateRequestButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
+    
+    func buttonAvailabilityLabelAnchors() {
+        buttonAvailability.translatesAutoresizingMaskIntoConstraints = false
+        buttonAvailability.isHidden = true
+        
+        buttonAvailability.bottomAnchor.constraint(equalTo: updateRequestButton.topAnchor).isActive = true
+        buttonAvailability.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+
+        buttonAvailability.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    }
 }

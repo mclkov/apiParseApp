@@ -1,5 +1,5 @@
 //
-//  MainLayout+ExchangeRateLabelsConstraints.swift
+//  MainLayout+ExchangeRateLabels.swift
 //  apiParseApp
 //
 //  Created by McL on 2/28/19.
