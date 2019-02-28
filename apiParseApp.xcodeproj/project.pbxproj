@@ -28,6 +28,7 @@
 		606DBD722227E82100621EF1 /* CurrencyRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD712227E82100621EF1 /* CurrencyRates.swift */; };
 		606DBD742227E98E00621EF1 /* StorageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD732227E98E00621EF1 /* StorageConstants.swift */; };
 		606DBD762227F37900621EF1 /* String+dateConvertation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD752227F37900621EF1 /* String+dateConvertation.swift */; };
+		606DBD7B22281FBD00621EF1 /* UIView+rotate360Degrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD7A22281FBD00621EF1 /* UIView+rotate360Degrees.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		606DBD712227E82100621EF1 /* CurrencyRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRates.swift; sourceTree = "<group>"; };
 		606DBD732227E98E00621EF1 /* StorageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageConstants.swift; sourceTree = "<group>"; };
 		606DBD752227F37900621EF1 /* String+dateConvertation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+dateConvertation.swift"; sourceTree = "<group>"; };
+		606DBD7A22281FBD00621EF1 /* UIView+rotate360Degrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+rotate360Degrees.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				606DBD732227E98E00621EF1 /* StorageConstants.swift */,
 				606DBD6A2227CB1700621EF1 /* String+htmlToUtf8.swift */,
 				606DBD752227F37900621EF1 /* String+dateConvertation.swift */,
+				606DBD7A22281FBD00621EF1 /* UIView+rotate360Degrees.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				606DBD512227061B00621EF1 /* TimeJSON.swift in Sources */,
 				606DBD622227A54500621EF1 /* MainConstraints.swift in Sources */,
 				606DBD462226FE4200621EF1 /* ApiService.swift in Sources */,
+				606DBD7B22281FBD00621EF1 /* UIView+rotate360Degrees.swift in Sources */,
 				606DBD4E222705D000621EF1 /* ApiResponseJSON.swift in Sources */,
 				606DBD6D2227E6DC00621EF1 /* StorageService.swift in Sources */,
 			);

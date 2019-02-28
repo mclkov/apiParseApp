@@ -116,7 +116,7 @@ extension MainVC {
     func setupUpdateRequestButton() {
         let backgroundImage = UIImage(named: "reload")
         updateRequestButton.setImage(backgroundImage, for: .normal)
-        //        updateRequestButton.setTitle(nil, for: .normal)
+        updateRequestButton.addTarget(self, action: #selector(self.updateRequestButtonPressed), for: .touchUpInside)
         
         view.insertSubview(updateRequestButton, at: 0)
         self.updateRequestButtonAnchors()

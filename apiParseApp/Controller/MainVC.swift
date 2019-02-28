@@ -32,6 +32,14 @@ class MainVC: CustomViewController {
         fetchLocalStorageData()
 //        fetchApiData()
     }
+
+    func startUpdateButtonSpinning() {
+        updateRequestButton.rotate360Degrees()
+    }
+    
+    @objc func updateRequestButtonPressed() {
+        startUpdateButtonSpinning()
+    }
     
     func fetchLocalStorageData() {
         let storage = StorageService.shared
