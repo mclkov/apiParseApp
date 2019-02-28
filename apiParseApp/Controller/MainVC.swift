@@ -108,6 +108,7 @@ class MainVC: CustomViewController {
         case "USD":
             storage.usdSymbol = currencySymbol
             storage.usdRate = currencyInfo.rate
+//            storage.usdRateFloat = currencyInfo.rateFloat
         case "GBP":
             storage.gbpSymbol = currencySymbol
             storage.gbpRate = currencyInfo.rate
