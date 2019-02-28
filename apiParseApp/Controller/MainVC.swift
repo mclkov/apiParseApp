@@ -39,21 +39,9 @@ class MainVC: CustomViewController {
     }
     
     func showData(data: ApiResponseJSON) {
-        
         setupChartName(data.chartName)
         setupTimeUpdated(time: data.time.updated)
-        
-        print(data.bpi)
         processExchangeRates(currencies: data.bpi)
-        
-//        setupUsdSymbolLabel(symbol: data.bpi[0])
-//        setupUsdRateLabel(value: "100")
-//
-//        setupEurSymbolLabel(symbol: "#")
-//        setupEurRateLabel(value: "120")
-////
-//        setupGbpSymbolLabel(symbol: "@")
-//        setupGbpRateLabel(value: "130")
     }
     
     func processExchangeRates(currencies: [String: CurrencyJSON]) {
