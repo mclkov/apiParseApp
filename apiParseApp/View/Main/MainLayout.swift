@@ -11,10 +11,18 @@ import UIKit
 extension MainVC {
     func setupView() {
         setupBackgroundColor()
+        
+        setupTopLabels()
+        setupExchangeRateLabels()
     }
     
     func setupBackgroundColor() {
         view.backgroundColor = ColorScheme.darkBlue
+    }
+    
+    func setupTopLabels() {
+        setupChartNameLabel()
+        setupTimeUpdatedLabel()
     }
     
     func setupChartNameLabel() {
@@ -33,6 +41,16 @@ extension MainVC {
         self.timeUpdatedLabelAnchors()
     }
     
+    func setupExchangeRateLabels() {
+        setupUsdSymbolLabel()
+        setupUsdRateLabel()
+        
+        setupEurSymbolLabel()
+        setupEurRateLabel()
+        
+        setupGbpSymbolLabel()
+        setupGbpRateLabel()
+    }
     
     //
     func setupUsdSymbolLabel() {

@@ -31,7 +31,7 @@ extension MainVC {
     func usdSymbolLabelAnchors() {
         usdSymbolLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        usdSymbolLabel.topAnchor.constraint(equalTo: timeUpdatedLabel.bottomAnchor, constant: 20).isActive = true
+        usdSymbolLabel.topAnchor.constraint(equalTo: timeUpdatedLabel.bottomAnchor, constant: 40).isActive = true
         usdSymbolLabel.leadingAnchor.constraint(equalTo: chartNameLabel.leadingAnchor).isActive = true
         usdSymbolLabel.widthAnchor.constraint(equalToConstant: MainConstants.rateLabelWidth).isActive = true
         usdSymbolLabel.heightAnchor.constraint(equalToConstant: MainConstants.rateLabelHeight).isActive = true
