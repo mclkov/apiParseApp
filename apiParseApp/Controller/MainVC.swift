@@ -34,6 +34,10 @@ class MainVC: CustomViewController {
     func fetchLocalStorageData() {
         let storage = StorageService.shared
         
+        print(storage.eurRateFloat)
+        print(storage.gbpRateFloat)
+        print(storage.usdRateFloat)
+        
         chartNameLabel.text = storage.chartName
         timeUpdatedLabel.text = storage.timeUpdated
         
@@ -108,13 +112,15 @@ class MainVC: CustomViewController {
         case "USD":
             storage.usdSymbol = currencySymbol
             storage.usdRate = currencyInfo.rate
-//            storage.usdRateFloat = currencyInfo.rateFloat
+            storage.usdRateFloat = currencyInfo.rateFloat
         case "GBP":
             storage.gbpSymbol = currencySymbol
             storage.gbpRate = currencyInfo.rate
+            storage.gbpRateFloat = currencyInfo.rateFloat
         case "EUR":
             storage.eurSymbol = currencySymbol
             storage.eurRate = currencyInfo.rate
+            storage.eurRateFloat = currencyInfo.rateFloat
         default:
             print("Unknown currency in API response: ", currencyKey)
         }

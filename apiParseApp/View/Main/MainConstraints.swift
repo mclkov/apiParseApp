@@ -99,6 +99,7 @@ extension MainVC {
         updateRequestButton.translatesAutoresizingMaskIntoConstraints = false
         
         updateRequestButton.bottomAnchor.constraint(equalTo: copyrightLabel.topAnchor, constant: -10).isActive = true
+        updateRequestButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         updateRequestButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
         updateRequestButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
