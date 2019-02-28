@@ -12,6 +12,14 @@ class MainVC: CustomViewController {
     let chartNameLabel = UILabel()
     let timeUpdatedLabel = UILabel()
     
+    let usdSymbolLabel = UILabel()
+    let gbpSymbolLabel = UILabel()
+    let eurSymbolLabel = UILabel()
+    
+    let usdRateLabel = UILabel()
+    let gbpRateLabel = UILabel()
+    let eurRateLabel = UILabel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +28,9 @@ class MainVC: CustomViewController {
 //        fetchApiData()
         setupChartName("BTC")
         setupTimeUpdated(time: "12/12/1990 00:00:00")
+        
+        setupUsdSymbolLabel(symbol: "$")
+        setupUsdRateLabel(value: "100")
     }
     
     func fetchApiData() {

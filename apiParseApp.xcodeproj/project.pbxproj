@@ -118,9 +118,9 @@
 		606DBD422226FD4500621EF1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				606DBD222226F98700621EF1 /* AppDelegate.swift */,
 				606DBD242226F98700621EF1 /* MainVC.swift */,
 				606DBD662227A75000621EF1 /* CustomViewController.swift */,
+				606DBD222226F98700621EF1 /* AppDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

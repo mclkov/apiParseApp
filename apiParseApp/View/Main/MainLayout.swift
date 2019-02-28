@@ -34,4 +34,20 @@ extension MainVC {
         view.insertSubview(timeUpdatedLabel, at: 0)
         self.timeUpdatedLabelAnchors()
     }
+    
+    func setupUsdSymbolLabel(symbol: String) {
+        usdSymbolLabel.text = symbol
+        usdSymbolLabel.textColor = .white
+        
+        view.insertSubview(usdSymbolLabel, at: 0)
+        self.usdSymbolLabelAnchors()
+    }
+    
+    func setupUsdRateLabel(value: String) {
+        usdRateLabel.text = value
+        usdRateLabel.textColor = .white
+        
+        view.insertSubview(usdRateLabel, at: 0)
+        self.usdRateLabelAnchors()
+    }
 }
