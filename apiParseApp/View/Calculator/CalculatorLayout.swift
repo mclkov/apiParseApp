@@ -15,6 +15,7 @@ extension CalculatorVC {
         
         setupEurLabel()
         setupEurTextField()
+        setupBtcLabel()
     }
     
     func setupBackgroundColor() {
@@ -41,5 +42,12 @@ extension CalculatorVC {
     func setupEurTextField() {
         view.insertSubview(eurTextField, at: 0)
         self.eurTextFieldAnchors()
+    }
+    
+    func setupBtcLabel() {
+        btcLabel.text = "BTC"
+        
+        view.insertSubview(btcLabel, at: 0)
+        self.btcLabelAnchors()
     }
 }

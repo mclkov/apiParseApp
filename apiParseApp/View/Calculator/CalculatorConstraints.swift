@@ -20,15 +20,23 @@ extension CalculatorVC {
         eurLabel.translatesAutoresizingMaskIntoConstraints = false
         
         eurLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
-        eurLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        eurLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: CalculatorConstants.columnSpace).isActive = true
         eurLabel.widthAnchor.constraint(equalToConstant: 40).isActive = true
     }
     
     func eurTextFieldAnchors() {
         eurTextField.translatesAutoresizingMaskIntoConstraints = false
         
-        eurTextField.topAnchor.constraint(equalTo: eurLabel.bottomAnchor, constant: CalculatorConstants.topSpace).isActive = true
+        eurTextField.topAnchor.constraint(equalTo: eurLabel.bottomAnchor, constant: CalculatorConstants.columnSpace).isActive = true
         eurTextField.leadingAnchor.constraint(equalTo: eurLabel.leadingAnchor).isActive = true
-        eurTextField.widthAnchor.constraint(equalToConstant: 140).isActive = true
+        eurTextField.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -CalculatorConstants.columnSpace).isActive = true
+    }
+    
+    func btcLabelAnchors() {
+        btcLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        btcLabel.topAnchor.constraint(equalTo: eurLabel.topAnchor).isActive = true
+        btcLabel.leadingAnchor.constraint(equalTo: eurTextField.trailingAnchor, constant: CalculatorConstants.columnSpace).isActive = true
+        btcLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: CalculatorConstants.columnSpace).isActive = true
     }
 }
