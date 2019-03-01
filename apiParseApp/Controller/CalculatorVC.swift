@@ -9,8 +9,15 @@
 import UIKit
 
 class CalculatorVC: CustomViewController {
+    let dismissButton = UIButton(type: .system)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupView()
+    }
+    
+    @objc func dismissButtonPressed() {
+        dismiss(animated: true, completion: nil)
     }
 }

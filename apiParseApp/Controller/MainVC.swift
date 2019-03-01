@@ -29,7 +29,6 @@ class MainVC: CustomViewController {
         super.viewDidLoad()
         
         self.setupView()
-        
         fetchLocalStorageData()
     }
 
@@ -50,7 +49,8 @@ class MainVC: CustomViewController {
     }
     
     @objc func presentCalculatorVC() {
-        print("Coming soon")
+        let calculatorVC = CalculatorVC()
+        present(calculatorVC, animated: true, completion: nil)
     }
     
     @objc func updateRequestButtonPressed() {
