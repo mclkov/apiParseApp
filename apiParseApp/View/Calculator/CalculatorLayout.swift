@@ -26,12 +26,12 @@ extension CalculatorVC {
         
         setupGbpLabel()
         setupGbpTextField()
-        setupGbpToBtcTextField()        
+        setupGbpToBtcTextField()
     }
     
     func setupScrollView() {
         scrollView.frame = self.view.frame
-        scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: scrollView.frame.size.height)
+        scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: scrollView.frame.size.height+CalculatorConstants.doneButtonHeight)
         
         view.insertSubview(scrollView, at: 0)
         self.scrollViewAnchors()

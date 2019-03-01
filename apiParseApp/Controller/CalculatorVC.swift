@@ -37,16 +37,27 @@ class CalculatorVC: CustomViewController {
     }
     
     func setupEvents() {
+        eurTextField.name = "eur"
         eurTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        usdTextField.name = "usd"
         usdTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        gbpTextField.name = "gbp"
         gbpTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
 
+        eurToBtcTextField.name = "eurToBtc"
         eurToBtcTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        usdToBtcTextField.name = "usdToBtc"
         usdToBtcTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        gbpToBtcTextField.name = "gbpToBtc"
         gbpToBtcTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
-    @objc func textFieldDidChange(_ textField: UITextField) {
+    @objc func textFieldDidChange(_ textField: DecimalTextField) {
         print(textField.text)
+        print(textField.name)
     }
 }

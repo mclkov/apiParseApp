@@ -13,4 +13,5 @@ struct CalculatorConstants {
     static let calculatorFont: String = "Avenir-Light"
     static let columnSpace: CGFloat = 15
     static let currencyLabelWidth: CGFloat = 40
+    static let doneButtonHeight: CGFloat = 30
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class DecimalTextField: UITextField {
     let padding = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    var name: String = ""
     
     override init(frame: CGRect) {
         super.init(frame: frame)
