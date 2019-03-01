@@ -35,6 +35,7 @@
 		606DBD882228F20100621EF1 /* CalculatorConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD872228F20100621EF1 /* CalculatorConstraints.swift */; };
 		606DBD8A222900D800621EF1 /* DecimalTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD89222900D800621EF1 /* DecimalTextField.swift */; };
 		606DBD8C2229019D00621EF1 /* CalculatorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD8B2229019D00621EF1 /* CalculatorConstants.swift */; };
+		606DBD8E222914C700621EF1 /* CurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD8D222914C700621EF1 /* CurrencyLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		606DBD872228F20100621EF1 /* CalculatorConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConstraints.swift; sourceTree = "<group>"; };
 		606DBD89222900D800621EF1 /* DecimalTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalTextField.swift; sourceTree = "<group>"; };
 		606DBD8B2229019D00621EF1 /* CalculatorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConstants.swift; sourceTree = "<group>"; };
+		606DBD8D222914C700621EF1 /* CurrencyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 			children = (
 				606DBD852228F13600621EF1 /* CalculatorLayout.swift */,
 				606DBD872228F20100621EF1 /* CalculatorConstraints.swift */,
+				606DBD8D222914C700621EF1 /* CurrencyLabel.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				606DBD4E222705D000621EF1 /* ApiResponseJSON.swift in Sources */,
 				606DBD6D2227E6DC00621EF1 /* StorageService.swift in Sources */,
 				606DBD812228622800621EF1 /* MainLayout+updateButtonBehaviour.swift in Sources */,
+				606DBD8E222914C700621EF1 /* CurrencyLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

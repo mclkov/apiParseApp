@@ -10,5 +10,5 @@ import UIKit
 
 struct CalculatorConstants {
     static let topSpace: CGFloat = 10
-    static let textFieldFont: String = "Avenir-Light"
+    static let calculatorFont: String = "Avenir-Light"
 }

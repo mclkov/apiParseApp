@@ -43,7 +43,7 @@ class DecimalTextField: UITextField {
         backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.25)
         textColor = .white
         textAlignment = .left
-        font = UIFont(name: CalculatorConstants.textFieldFont, size: 20)
+        font = UIFont(name: CalculatorConstants.calculatorFont, size: 20)
         
         if let p = placeholder
         {

@@ -32,11 +32,9 @@ extension CalculatorVC {
     }
     
     func setupEurLabel() {
-        eurLabel.textColor = .white
         eurLabel.text = "Eur"
 
         view.insertSubview(eurLabel, at: 0)
-        
         self.eurLabelAnchors()
     }
     

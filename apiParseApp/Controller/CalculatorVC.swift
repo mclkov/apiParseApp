@@ -11,10 +11,10 @@ import UIKit
 class CalculatorVC: CustomViewController {
     let dismissButton = UIButton(type: .system)
     
-    let btcLabel = UILabel()
-    let eurLabel = UILabel()
-    let usdLabel = UILabel()
-    let gbpLabel = UILabel()
+    let btcLabel = CurrencyLabel()
+    let eurLabel = CurrencyLabel()
+    let usdLabel = CurrencyLabel()
+    let gbpLabel = CurrencyLabel()
     
     let eurTextField = DecimalTextField()
     let usdTextField = UITextField()
