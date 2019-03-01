@@ -10,20 +10,31 @@ import UIKit
 
 extension CalculatorVC {
     func setupView() {
-        setupDismissButton()
+        setupScrollView()
         setupBackgroundColor()
+        
+        setupDismissButton()
         
         setupEurLabel()
         setupEurTextField()
         setupBtcLabel()
         setupEurToBtcTextField()
+//
+//        setupUsdLabel()
+//        setupUsdTextField()
+    }
+    
+    func setupScrollView() {
+        scrollView.frame = self.view.frame
+        scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: scrollView.frame.size.height)
         
-        setupUsdLabel()
-        setupUsdTextField()
+        view.insertSubview(scrollView, at: 0)
+        self.scrollViewAnchors()
     }
     
     func setupBackgroundColor() {
         view.backgroundColor = ColorScheme.darkBlue
+        scrollView.backgroundColor = ColorScheme.darkBlue
     }
     
     func setupDismissButton() {
@@ -32,31 +43,31 @@ extension CalculatorVC {
         
         dismissButton.addTarget(self, action: #selector(self.dismissButtonPressed), for: .touchUpInside)
         
-        view.insertSubview(dismissButton, at: 0)
+        scrollView.insertSubview(dismissButton, at: 0)
         dismissButtonAnchors()
     }
     
     func setupEurLabel() {
         eurLabel.text = "Eur"
 
-        view.insertSubview(eurLabel, at: 0)
+        scrollView.addSubview(eurLabel)
         self.eurLabelAnchors()
     }
     
     func setupEurTextField() {
-        view.insertSubview(eurTextField, at: 0)
+        scrollView.insertSubview(eurTextField, at: 0)
         self.eurTextFieldAnchors()
     }
     
     func setupBtcLabel() {
         btcLabel.text = "BTC"
         
-        view.insertSubview(btcLabel, at: 0)
+        scrollView.insertSubview(btcLabel, at: 0)
         self.btcLabelAnchors()
     }
     
     func setupEurToBtcTextField() {
-        view.insertSubview(eurToBtcTextField, at: 0)
+        scrollView.insertSubview(eurToBtcTextField, at: 0)
         self.eurToBtcTextFieldAnchors()
     }
     
@@ -64,12 +75,12 @@ extension CalculatorVC {
     func setupUsdLabel() {
         usdLabel.text = "Usd"
         
-        view.insertSubview(usdLabel, at: 0)
+        scrollView.insertSubview(usdLabel, at: 0)
         self.usdLabelAnchors()
     }
     
     func setupUsdTextField() {
-        view.insertSubview(usdTextField, at: 0)
+        scrollView.insertSubview(usdTextField, at: 0)
         self.usdTextFieldAnchors()
     }
 //

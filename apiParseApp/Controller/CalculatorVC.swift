@@ -10,6 +10,7 @@ import UIKit
 
 class CalculatorVC: CustomViewController {
     let dismissButton = UIButton(type: .system)
+    let scrollView = UIScrollView()
     
     let btcLabel = CurrencyLabel()
     let eurLabel = CurrencyLabel()

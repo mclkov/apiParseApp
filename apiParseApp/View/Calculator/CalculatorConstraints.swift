@@ -9,6 +9,15 @@
 import UIKit
 
 extension CalculatorVC {
+    func scrollViewAnchors() {
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        
+        scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
     func dismissButtonAnchors() {
         dismissButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -19,8 +28,8 @@ extension CalculatorVC {
     func eurLabelAnchors() {
         eurLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        eurLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: CalculatorConstants.topSpace).isActive = true
-        eurLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: CalculatorConstants.columnSpace).isActive = true
+        eurLabel.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: CalculatorConstants.topSpace).isActive = true
+        eurLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: CalculatorConstants.columnSpace).isActive = true
         eurLabel.widthAnchor.constraint(equalToConstant: CalculatorConstants.currencyLabelWidth).isActive = true
     }
     
@@ -29,7 +38,7 @@ extension CalculatorVC {
         
         eurTextField.topAnchor.constraint(equalTo: eurLabel.bottomAnchor, constant: CalculatorConstants.columnSpace).isActive = true
         eurTextField.leadingAnchor.constraint(equalTo: eurLabel.leadingAnchor).isActive = true
-        eurTextField.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -CalculatorConstants.columnSpace).isActive = true
+        eurTextField.trailingAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: -CalculatorConstants.columnSpace).isActive = true
     }
     
     func btcLabelAnchors() {
@@ -37,7 +46,7 @@ extension CalculatorVC {
         
         btcLabel.topAnchor.constraint(equalTo: eurLabel.topAnchor).isActive = true
         btcLabel.leadingAnchor.constraint(equalTo: eurTextField.trailingAnchor, constant: CalculatorConstants.columnSpace).isActive = true
-        btcLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -CalculatorConstants.columnSpace).isActive = true
+        btcLabel.widthAnchor.constraint(equalToConstant: CalculatorConstants.currencyLabelWidth).isActive = true
     }
     
     func eurToBtcTextFieldAnchors() {
@@ -45,8 +54,12 @@ extension CalculatorVC {
         
         eurToBtcTextField.topAnchor.constraint(equalTo: btcLabel.bottomAnchor, constant: CalculatorConstants.columnSpace).isActive = true
         eurToBtcTextField.leadingAnchor.constraint(equalTo: btcLabel.leadingAnchor).isActive = true
-        eurToBtcTextField.trailingAnchor.constraint(equalTo: btcLabel.trailingAnchor).isActive = true
+        eurToBtcTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -CalculatorConstants.columnSpace).isActive = true
     }
+    
+    
+    
+    
     
 
     
@@ -63,7 +76,7 @@ extension CalculatorVC {
         
         usdTextField.topAnchor.constraint(equalTo: usdLabel.bottomAnchor, constant: CalculatorConstants.columnSpace).isActive = true
         usdTextField.leadingAnchor.constraint(equalTo: usdLabel.leadingAnchor).isActive = true
-        usdTextField.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -CalculatorConstants.columnSpace).isActive = true
+        usdTextField.trailingAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: -CalculatorConstants.columnSpace).isActive = true
     }
     
     func usdToBtcTextFieldAnchors() {
