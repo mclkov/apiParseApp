@@ -12,6 +12,9 @@ extension CalculatorVC {
     func setupView() {
         setupDismissButton()
         setupBackgroundColor()
+        
+        setupEurLabel()
+        setupEurTextField()
     }
     
     func setupBackgroundColor() {
@@ -26,5 +29,19 @@ extension CalculatorVC {
         
         view.insertSubview(dismissButton, at: 0)
         dismissButtonAnchors()
+    }
+    
+    func setupEurLabel() {
+        eurLabel.textColor = .white
+        eurLabel.text = "Eur"
+
+        view.insertSubview(eurLabel, at: 0)
+        
+        self.eurLabelAnchors()
+    }
+    
+    func setupEurTextField() {
+        view.insertSubview(eurTextField, at: 0)
+        self.eurTextFieldAnchors()
     }
 }
