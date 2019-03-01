@@ -10,15 +10,17 @@ import Foundation
 
 class ExchangeService {
     static let shared = ExchangeService()
-    var exchangeRate: Float?
-    var direction: Bool?
     
-    init(exchangeRate: Float = 1.0, currencyAToCurrencyB: Bool = true) {
-        self.exchangeRate = exchangeRate
-        self.direction = currencyAToCurrencyB
-    }
+    var exchangeRate: Float = 1.0
+    var directionAToB: Bool = true
     
-    func calculate() {
-        
+    var currencyA: Float = 0.0
+    
+    func calculate() -> Float {
+        if directionAToB {
+            return currencyA * exchangeRate
+        } else {
+            return currencyA / exchangeRate
+        }
     }
 }
