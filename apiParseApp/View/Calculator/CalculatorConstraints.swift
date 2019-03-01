@@ -37,6 +37,14 @@ extension CalculatorVC {
         
         btcLabel.topAnchor.constraint(equalTo: eurLabel.topAnchor).isActive = true
         btcLabel.leadingAnchor.constraint(equalTo: eurTextField.trailingAnchor, constant: CalculatorConstants.columnSpace).isActive = true
-        btcLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: CalculatorConstants.columnSpace).isActive = true
+        btcLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -CalculatorConstants.columnSpace).isActive = true
+    }
+    
+    func eurToBtcTextFieldAnchors() {
+        eurToBtcTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        eurToBtcTextField.topAnchor.constraint(equalTo: btcLabel.bottomAnchor, constant: CalculatorConstants.columnSpace).isActive = true
+        eurToBtcTextField.leadingAnchor.constraint(equalTo: btcLabel.leadingAnchor).isActive = true
+        eurToBtcTextField.trailingAnchor.constraint(equalTo: btcLabel.trailingAnchor).isActive = true
     }
 }

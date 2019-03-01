@@ -17,12 +17,12 @@ class CalculatorVC: CustomViewController {
     let gbpLabel = CurrencyLabel()
     
     let eurTextField = DecimalTextField()
-    let usdTextField = UITextField()
-    let gbpTextField = UITextField()
+    let usdTextField = DecimalTextField()
+    let gbpTextField = DecimalTextField()
     
-    let eurToBtcTextField = UITextField()
-    let usdToBtcTextField = UITextField()
-    let gbpToBtcTextField = UITextField()
+    let eurToBtcTextField = DecimalTextField()
+    let usdToBtcTextField = DecimalTextField()
+    let gbpToBtcTextField = DecimalTextField()
     
     override func viewDidLoad() {
         super.viewDidLoad()
