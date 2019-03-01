@@ -58,11 +58,6 @@ extension CalculatorVC {
     }
     
     
-    
-    
-    
-
-    
     func usdLabelAnchors() {
         usdLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -82,8 +77,10 @@ extension CalculatorVC {
     func usdToBtcTextFieldAnchors() {
         usdToBtcTextField.translatesAutoresizingMaskIntoConstraints = false
         
-        usdToBtcTextField.topAnchor.constraint(equalTo: btcLabel.bottomAnchor, constant: CalculatorConstants.columnSpace).isActive = true
-        usdToBtcTextField.leadingAnchor.constraint(equalTo: btcLabel.leadingAnchor).isActive = true
-        usdToBtcTextField.trailingAnchor.constraint(equalTo: btcLabel.trailingAnchor).isActive = true
+        usdToBtcTextField.topAnchor.constraint(equalTo: usdTextField.topAnchor).isActive = true
+        usdToBtcTextField.leadingAnchor.constraint(equalTo: eurToBtcTextField.leadingAnchor).isActive = true
+        usdToBtcTextField.trailingAnchor.constraint(equalTo: eurToBtcTextField.trailingAnchor).isActive = true
+        
+        print("works")
     }
 }
