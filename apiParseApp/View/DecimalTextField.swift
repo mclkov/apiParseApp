@@ -37,12 +37,13 @@ class DecimalTextField: UITextField {
     func settings() {
         doneAccessory = true
         keyboardType = .decimalPad
+        clearButtonMode = .whileEditing
     }
     
     func customizeView() {
         layer.cornerRadius = 5
         
-        backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.25)
+        backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.4)
         textColor = .white
         textAlignment = .left
         font = UIFont(name: CalculatorConstants.calculatorFont, size: 20)
