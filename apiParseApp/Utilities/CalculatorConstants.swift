@@ -9,6 +9,8 @@
 import UIKit
 
 struct CalculatorConstants {
+    static let topSpace: CGFloat = 40
     static let calculatorFont: String = "Avenir-Light"
     static let columnSpace: CGFloat = 15
+    static let currencyLabelWidth: CGFloat = 40
 }

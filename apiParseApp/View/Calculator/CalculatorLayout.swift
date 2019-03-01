@@ -17,6 +17,9 @@ extension CalculatorVC {
         setupEurTextField()
         setupBtcLabel()
         setupEurToBtcTextField()
+        
+        setupUsdLabel()
+        setupUsdTextField()
     }
     
     func setupBackgroundColor() {
@@ -56,4 +59,22 @@ extension CalculatorVC {
         view.insertSubview(eurToBtcTextField, at: 0)
         self.eurToBtcTextFieldAnchors()
     }
+    
+    
+    func setupUsdLabel() {
+        usdLabel.text = "Usd"
+        
+        view.insertSubview(usdLabel, at: 0)
+        self.usdLabelAnchors()
+    }
+    
+    func setupUsdTextField() {
+        view.insertSubview(usdTextField, at: 0)
+        self.usdTextFieldAnchors()
+    }
+//
+//    func setupUsdToBtcTextField() {
+//        view.insertSubview(usdToBtcTextField, at: 0)
+//        self.usdToBtcTextFieldAnchors()
+//    }
 }
