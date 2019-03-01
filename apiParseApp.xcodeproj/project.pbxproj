@@ -37,6 +37,7 @@
 		606DBD8C2229019D00621EF1 /* CalculatorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD8B2229019D00621EF1 /* CalculatorConstants.swift */; };
 		606DBD8E222914C700621EF1 /* CurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD8D222914C700621EF1 /* CurrencyLabel.swift */; };
 		606DBD902229405200621EF1 /* UITextField+KeyboardDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD8F2229405200621EF1 /* UITextField+KeyboardDoneButton.swift */; };
+		606DBD922229459E00621EF1 /* ExchangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD912229459E00621EF1 /* ExchangeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		606DBD8B2229019D00621EF1 /* CalculatorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConstants.swift; sourceTree = "<group>"; };
 		606DBD8D222914C700621EF1 /* CurrencyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLabel.swift; sourceTree = "<group>"; };
 		606DBD8F2229405200621EF1 /* UITextField+KeyboardDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+KeyboardDoneButton.swift"; sourceTree = "<group>"; };
+		606DBD912229459E00621EF1 /* ExchangeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				606DBD452226FE4200621EF1 /* ApiService.swift */,
 				606DBD472226FED400621EF1 /* WebRequestImpl.swift */,
 				606DBD6C2227E6DC00621EF1 /* StorageService.swift */,
+				606DBD912229459E00621EF1 /* ExchangeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				606DBD6B2227CB1700621EF1 /* String+htmlToUtf8.swift in Sources */,
 				606DBD232226F98700621EF1 /* AppDelegate.swift in Sources */,
 				606DBD54222706D200621EF1 /* CurrencyJSON.swift in Sources */,
+				606DBD922229459E00621EF1 /* ExchangeService.swift in Sources */,
 				606DBD652227A5B700621EF1 /* ColorScheme.swift in Sources */,
 				606DBD512227061B00621EF1 /* TimeJSON.swift in Sources */,
 				606DBD622227A54500621EF1 /* MainConstraints.swift in Sources */,
