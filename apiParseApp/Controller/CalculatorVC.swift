@@ -59,5 +59,34 @@ class CalculatorVC: CustomViewController {
     @objc func textFieldDidChange(_ textField: DecimalTextField) {
         print(textField.text)
         print(textField.name)
+        guard let currency = textField.text else { return }
+        guard let currencyFloat = Float(currency) else { return }
+        
+        let operation = textField.name
+        calculateExchangeRate(operation: operation, currencyAmount: currencyFloat)
+    }
+    
+    func calculateExchangeRate(operation: String, currencyAmount: Float) {
+        let storage = StorageService.shared
+        let calculator = ExchangeService()
+        
+        switch operation {
+        case "eur":
+            let exchangeRate = storage.eurRateFloat
+            
+            calculator.currencyA = currencyAmount
+            calculator.exchangeRate = exchangeRate
+            calculator.directionAToB = true
+            
+            eurToBtcTextField.text = String(calculator.calculate())
+        case "usd":
+            let exchangeRate = storage.usdRateFloat
+            
+            calculator.currencyA = currencyAmount
+            calculator.exchangeRate = exchangeRate
+            calculator.directionAToB = true
+        default:
+            print("Unknown currency: ", operation)
+        }
     }
 }

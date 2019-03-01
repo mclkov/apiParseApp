@@ -31,7 +31,8 @@ extension CalculatorVC {
     
     func setupScrollView() {
         scrollView.frame = self.view.frame
-        scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: scrollView.frame.size.height+CalculatorConstants.doneButtonHeight)
+        let cgSize = CGSize(width: scrollView.frame.size.width, height: scrollView.frame.size.height+CalculatorConstants.doneButtonHeight)
+        scrollView.contentSize = cgSize
         
         view.insertSubview(scrollView, at: 0)
         self.scrollViewAnchors()
