@@ -76,7 +76,6 @@ class CalculatorVC: CustomViewController {
             
             calculator.currencyA = currencyAmount
             calculator.exchangeRate = exchangeRate
-            calculator.directionAToB = true
             
             eurToBtcTextField.text = String(calculator.calculate())
         case "usd":
@@ -84,7 +83,16 @@ class CalculatorVC: CustomViewController {
             
             calculator.currencyA = currencyAmount
             calculator.exchangeRate = exchangeRate
-            calculator.directionAToB = true
+            
+            usdToBtcTextField.text = String(calculator.calculate())
+        case "gbp":
+            let exchangeRate = storage.gbpRateFloat
+            
+            calculator.currencyA = currencyAmount
+            calculator.exchangeRate = exchangeRate
+            
+            gbpToBtcTextField.text = String(calculator.calculate())
+
         default:
             print("Unknown currency: ", operation)
         }
