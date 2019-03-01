@@ -92,7 +92,30 @@ class CalculatorVC: CustomViewController {
             calculator.exchangeRate = exchangeRate
             
             gbpToBtcTextField.text = String(calculator.calculate())
-
+        case "eurToBtc":
+            let exchangeRate = storage.eurRateFloat
+            
+            calculator.currencyA = currencyAmount
+            calculator.exchangeRate = exchangeRate
+            calculator.directionAToB = false
+            
+            eurTextField.text = String(calculator.calculate())
+        case "usdToBtc":
+            let exchangeRate = storage.usdRateFloat
+            
+            calculator.currencyA = currencyAmount
+            calculator.exchangeRate = exchangeRate
+            calculator.directionAToB = false
+            
+            usdTextField.text = String(calculator.calculate())
+        case "gbpToBtc":
+            let exchangeRate = storage.gbpRateFloat
+            
+            calculator.currencyA = currencyAmount
+            calculator.exchangeRate = exchangeRate
+            calculator.directionAToB = false
+            
+            gbpTextField.text = String(calculator.calculate())
         default:
             print("Unknown currency: ", operation)
         }
