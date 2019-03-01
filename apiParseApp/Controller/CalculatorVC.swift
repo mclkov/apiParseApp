@@ -57,8 +57,6 @@ class CalculatorVC: CustomViewController {
     }
     
     @objc func textFieldDidChange(_ textField: DecimalTextField) {
-        print(textField.text)
-        print(textField.name)
         guard let currency = textField.text else { return }
         guard let currencyFloat = Float(currency) else { return }
         
