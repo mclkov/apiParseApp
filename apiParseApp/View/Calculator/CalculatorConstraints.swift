@@ -12,7 +12,7 @@ extension CalculatorVC {
     func dismissButtonAnchors() {
         dismissButton.translatesAutoresizingMaskIntoConstraints = false
         
-        dismissButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
+        dismissButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
         dismissButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
 }

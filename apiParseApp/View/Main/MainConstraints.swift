@@ -95,11 +95,16 @@ extension MainVC {
         copyrightLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
     
+    func buttonStackViewAnchors() {
+        buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        buttonStackView.bottomAnchor.constraint(equalTo: copyrightLabel.topAnchor, constant: -10).isActive = true
+        buttonStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+    
     func updateRequestButtonAnchors() {
         updateRequestButton.translatesAutoresizingMaskIntoConstraints = false
         
-        updateRequestButton.bottomAnchor.constraint(equalTo: copyrightLabel.topAnchor, constant: -10).isActive = true
-        updateRequestButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -35).isActive = true
         updateRequestButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
         updateRequestButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
@@ -108,7 +113,7 @@ extension MainVC {
         buttonAvailabilityLabel.translatesAutoresizingMaskIntoConstraints = false
         buttonAvailabilityLabel.isHidden = true
         
-        buttonAvailabilityLabel.bottomAnchor.constraint(equalTo: updateRequestButton.topAnchor, constant: -10).isActive = true
+        buttonAvailabilityLabel.bottomAnchor.constraint(equalTo: buttonStackView.topAnchor, constant: -10).isActive = true
         buttonAvailabilityLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 
         buttonAvailabilityLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
@@ -117,8 +122,6 @@ extension MainVC {
     func calculatorButtonAnchors() {
         calculatorButton.translatesAutoresizingMaskIntoConstraints = false
         
-        calculatorButton.bottomAnchor.constraint(equalTo: copyrightLabel.topAnchor, constant: -10).isActive = true
-        calculatorButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 35).isActive = true
         calculatorButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
         calculatorButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }

@@ -18,6 +18,8 @@ extension MainVC {
         setupCopyringsLabel()
         setupUpdateRequestButton()
         setupCalculatorButton()
+        setupButtonStackView()
+        
         setupButtonAvailabilityLabel()
     }
     
@@ -72,7 +74,6 @@ extension MainVC {
         updateRequestButton.setImage(backgroundImage, for: .normal)
         updateRequestButton.addTarget(self, action: #selector(self.updateRequestButtonPressed), for: .touchUpInside)
         
-        view.insertSubview(updateRequestButton, at: 0)
         self.updateRequestButtonAnchors()
     }
     
@@ -81,8 +82,19 @@ extension MainVC {
         calculatorButton.setImage(backgroundImage, for: .normal)
         calculatorButton.addTarget(self, action: #selector(self.presentCalculatorVC), for: .touchUpInside)
         
-        view.insertSubview(calculatorButton, at: 0)
         self.calculatorButtonAnchors()
+    }
+    
+    func setupButtonStackView() {
+        buttonStackView.axis = .horizontal
+        buttonStackView.alignment = .center
+        buttonStackView.spacing = 10
+        
+        buttonStackView.addArrangedSubview(updateRequestButton)
+        buttonStackView.addArrangedSubview(calculatorButton)
+        
+        view.insertSubview(buttonStackView, at: 0)
+        self.buttonStackViewAnchors()
     }
     
     func setupButtonAvailabilityLabel() {

@@ -21,7 +21,6 @@ extension CalculatorVC {
     func setupDismissButton() {
         dismissButton.setTitle("Return to the Main screen", for: .normal)
         dismissButton.setTitleColor(.white, for: .normal)
-//        dismissButton. = UIButton.ButtonType.infoDark
         
         dismissButton.addTarget(self, action: #selector(self.dismissButtonPressed), for: .touchUpInside)
         

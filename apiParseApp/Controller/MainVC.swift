@@ -20,9 +20,12 @@ class MainVC: CustomViewController {
     let gbpRateLabel = UILabel()
     let eurRateLabel = UILabel()
     
+    
+    let buttonStackView = UIStackView()
     let buttonAvailabilityLabel = UILabel()
-    let updateRequestButton = UIButton()
     let calculatorButton = UIButton()
+    
+    let updateRequestButton = UIButton()
     let copyrightLabel = UILabel()
     
     override func viewDidLoad() {
