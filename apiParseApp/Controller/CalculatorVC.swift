@@ -29,6 +29,7 @@ class CalculatorVC: CustomViewController {
         super.viewDidLoad()
         
         self.setupView()
+        
     }
     
     @objc func dismissButtonPressed() {

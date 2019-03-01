@@ -36,6 +36,7 @@
 		606DBD8A222900D800621EF1 /* DecimalTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD89222900D800621EF1 /* DecimalTextField.swift */; };
 		606DBD8C2229019D00621EF1 /* CalculatorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD8B2229019D00621EF1 /* CalculatorConstants.swift */; };
 		606DBD8E222914C700621EF1 /* CurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD8D222914C700621EF1 /* CurrencyLabel.swift */; };
+		606DBD902229405200621EF1 /* UITextField+KeyboardDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD8F2229405200621EF1 /* UITextField+KeyboardDoneButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		606DBD89222900D800621EF1 /* DecimalTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalTextField.swift; sourceTree = "<group>"; };
 		606DBD8B2229019D00621EF1 /* CalculatorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConstants.swift; sourceTree = "<group>"; };
 		606DBD8D222914C700621EF1 /* CurrencyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLabel.swift; sourceTree = "<group>"; };
+		606DBD8F2229405200621EF1 /* UITextField+KeyboardDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+KeyboardDoneButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				606DBD6A2227CB1700621EF1 /* String+htmlToUtf8.swift */,
 				606DBD752227F37900621EF1 /* String+dateConvertation.swift */,
 				606DBD7A22281FBD00621EF1 /* UIView+rotate360Degrees.swift */,
+				606DBD8F2229405200621EF1 /* UITextField+KeyboardDoneButton.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				606DBD622227A54500621EF1 /* MainConstraints.swift in Sources */,
 				606DBD462226FE4200621EF1 /* ApiService.swift in Sources */,
 				606DBD7B22281FBD00621EF1 /* UIView+rotate360Degrees.swift in Sources */,
+				606DBD902229405200621EF1 /* UITextField+KeyboardDoneButton.swift in Sources */,
 				606DBD4E222705D000621EF1 /* ApiResponseJSON.swift in Sources */,
 				606DBD6D2227E6DC00621EF1 /* StorageService.swift in Sources */,
 				606DBD812228622800621EF1 /* MainLayout+updateButtonBehaviour.swift in Sources */,

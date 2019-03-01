@@ -34,6 +34,7 @@ class DecimalTextField: UITextField {
     }
     
     func settings() {
+        doneAccessory = true
         keyboardType = .decimalPad
     }
     
