@@ -98,12 +98,12 @@ extension CalculatorVC {
         gbpTextField.leadingAnchor.constraint(equalTo: eurLabel.leadingAnchor).isActive = true
         gbpTextField.trailingAnchor.constraint(equalTo: eurTextField.trailingAnchor).isActive = true
     }
-//
-//    func usdToBtcTextFieldAnchors() {
-//        usdToBtcTextField.translatesAutoresizingMaskIntoConstraints = false
-//
-//        usdToBtcTextField.topAnchor.constraint(equalTo: usdTextField.topAnchor).isActive = true
-//        usdToBtcTextField.leadingAnchor.constraint(equalTo: eurToBtcTextField.leadingAnchor).isActive = true
-//        usdToBtcTextField.trailingAnchor.constraint(equalTo: eurToBtcTextField.trailingAnchor).isActive = true
-//    }
+
+    func gbpToBtcTextFieldAnchors() {
+        gbpToBtcTextField.translatesAutoresizingMaskIntoConstraints = false
+
+        gbpToBtcTextField.topAnchor.constraint(equalTo: gbpTextField.topAnchor).isActive = true
+        gbpToBtcTextField.leadingAnchor.constraint(equalTo: eurToBtcTextField.leadingAnchor).isActive = true
+        gbpToBtcTextField.trailingAnchor.constraint(equalTo: eurToBtcTextField.trailingAnchor).isActive = true
+    }
 }
