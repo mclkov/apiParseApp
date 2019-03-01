@@ -19,15 +19,14 @@ extension CalculatorVC {
         setupEurTextField()
         setupBtcLabel()
         setupEurToBtcTextField()
-//
+
         setupUsdLabel()
         setupUsdTextField()
         setupUsdToBtcTextField()
         
         setupGbpLabel()
         setupGbpTextField()
-        setupGbpToBtcTextField()
-        
+        setupGbpToBtcTextField()        
     }
     
     func setupScrollView() {
