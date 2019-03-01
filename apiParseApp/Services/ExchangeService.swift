@@ -20,6 +20,10 @@ class ExchangeService {
         if directionAToB {
             return currencyA * exchangeRate
         } else {
+            if exchangeRate <= 0 {
+                print("Division by 0")
+                return 0.0
+            }
             return currencyA / exchangeRate
         }
     }

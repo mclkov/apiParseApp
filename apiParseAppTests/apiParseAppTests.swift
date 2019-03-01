@@ -60,4 +60,34 @@ class apiParseAppTests: XCTestCase {
         // Assert
         XCTAssert(result == 1)
     }
+    
+    func testExchangeServiceAToBFail() {
+        // bitcoin to usd
+        // Arrange
+        let service = ExchangeService()
+        service.currencyA = 1 //bitcoin
+        service.directionAToB = true
+        service.exchangeRate = 0
+        
+        // Act
+        let result = service.calculate()
+        
+        // Assert
+        XCTAssert(result == 0.0)
+    }
+    
+    func testExchangeServiceBToAFail() {
+        // usd to bitcoin
+        // Arrange
+        let service = ExchangeService()
+        service.currencyA = 3834 // usd
+        service.directionAToB = false
+        service.exchangeRate = 0
+        
+        // Act
+        let result = service.calculate()
+        
+        // Assert
+        XCTAssert(result == 0.0)
+    }
 }
