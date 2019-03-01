@@ -23,6 +23,11 @@ extension CalculatorVC {
         setupUsdLabel()
         setupUsdTextField()
         setupUsdToBtcTextField()
+        
+        setupGbpLabel()
+        setupGbpTextField()
+//        setupGbpToBtcTextField()
+        
     }
     
     func setupScrollView() {
@@ -89,4 +94,21 @@ extension CalculatorVC {
         scrollView.insertSubview(usdToBtcTextField, at: 0)
         self.usdToBtcTextFieldAnchors()
     }
+    
+    func setupGbpLabel() {
+        gbpLabel.text = "Gbp"
+        
+        scrollView.insertSubview(gbpLabel, at: 0)
+        self.gbpLabelAnchors()
+    }
+    
+    func setupGbpTextField() {
+        scrollView.insertSubview(gbpTextField, at: 0)
+        self.gbpTextFieldAnchors()
+    }
+//
+//    func setupGbpToBtcTextField() {
+//        scrollView.insertSubview(gbpToBtcTextField, at: 0)
+//        self.gbpToBtcTextFieldAnchors()
+//    }
 }

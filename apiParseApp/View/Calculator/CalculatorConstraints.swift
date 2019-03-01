@@ -70,8 +70,8 @@ extension CalculatorVC {
         usdTextField.translatesAutoresizingMaskIntoConstraints = false
         
         usdTextField.topAnchor.constraint(equalTo: usdLabel.bottomAnchor, constant: CalculatorConstants.columnSpace).isActive = true
-        usdTextField.leadingAnchor.constraint(equalTo: usdLabel.leadingAnchor).isActive = true
-        usdTextField.trailingAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: -CalculatorConstants.columnSpace).isActive = true
+        usdTextField.leadingAnchor.constraint(equalTo: eurLabel.leadingAnchor).isActive = true
+        usdTextField.trailingAnchor.constraint(equalTo: eurTextField.trailingAnchor).isActive = true
     }
     
     func usdToBtcTextFieldAnchors() {
@@ -80,7 +80,30 @@ extension CalculatorVC {
         usdToBtcTextField.topAnchor.constraint(equalTo: usdTextField.topAnchor).isActive = true
         usdToBtcTextField.leadingAnchor.constraint(equalTo: eurToBtcTextField.leadingAnchor).isActive = true
         usdToBtcTextField.trailingAnchor.constraint(equalTo: eurToBtcTextField.trailingAnchor).isActive = true
-        
-        print("works")
     }
+    
+    
+    func gbpLabelAnchors() {
+        gbpLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        gbpLabel.topAnchor.constraint(equalTo: usdTextField.bottomAnchor, constant: CalculatorConstants.topSpace).isActive = true
+        gbpLabel.leadingAnchor.constraint(equalTo: eurLabel.leadingAnchor).isActive = true
+        gbpLabel.widthAnchor.constraint(equalToConstant: CalculatorConstants.currencyLabelWidth).isActive = true
+    }
+    
+    func gbpTextFieldAnchors() {
+        gbpTextField.translatesAutoresizingMaskIntoConstraints = false
+
+        gbpTextField.topAnchor.constraint(equalTo: gbpLabel.bottomAnchor, constant: CalculatorConstants.columnSpace).isActive = true
+        gbpTextField.leadingAnchor.constraint(equalTo: eurLabel.leadingAnchor).isActive = true
+        gbpTextField.trailingAnchor.constraint(equalTo: eurTextField.trailingAnchor).isActive = true
+    }
+//
+//    func usdToBtcTextFieldAnchors() {
+//        usdToBtcTextField.translatesAutoresizingMaskIntoConstraints = false
+//
+//        usdToBtcTextField.topAnchor.constraint(equalTo: usdTextField.topAnchor).isActive = true
+//        usdToBtcTextField.leadingAnchor.constraint(equalTo: eurToBtcTextField.leadingAnchor).isActive = true
+//        usdToBtcTextField.trailingAnchor.constraint(equalTo: eurToBtcTextField.trailingAnchor).isActive = true
+//    }
 }
