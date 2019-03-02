@@ -145,6 +145,7 @@ class MainVC: CustomViewController {
                 }
                 
                 let exchange = ExchangeRate(context: backgroundContext)
+                exchange.code = currencyInfo.code
                 exchange.symbol = currencySymbol
                 exchange.rate = currencyInfo.rate
                 exchange.rateFloat = currencyInfo.rateFloat
