@@ -115,5 +115,6 @@ extension MainVC {
         
         view.insertSubview(mainTableView, at: 0)
         self.mainTableViewAnchors()
+        self.registerCellReuseId()
     }
 }

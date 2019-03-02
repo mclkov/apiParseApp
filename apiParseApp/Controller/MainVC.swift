@@ -13,7 +13,7 @@ class MainVC: CustomViewController {
     var mainTableView = UITableView()
     
     var pageInfo: PageInfo?
-    var exchangeRates: [ExchangeRate]?
+    var exchangeRates = [ExchangeRate]()
     
     let chartNameLabel = UILabel()
     let timeUpdatedLabel = UILabel()
@@ -91,8 +91,6 @@ class MainVC: CustomViewController {
     
     func fetchExchangeRates() {
         exchangeRates = CoreDataManager.shared.fetchExchangeRates()
-        
-        guard let exchangeRates = exchangeRates else { return }
         for value in exchangeRates {
             print("\(value.symbol) \(value.rate)")
         }
