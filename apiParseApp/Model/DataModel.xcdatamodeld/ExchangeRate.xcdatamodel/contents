@@ -5,7 +5,12 @@
         <attribute name="rateFloat" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="symbol" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="PageInfo" representedClassName="PageInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="chartName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
     <elements>
         <element name="ExchangeRate" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="PageInfo" positionX="-54" positionY="18" width="128" height="75"/>
     </elements>
 </model>
