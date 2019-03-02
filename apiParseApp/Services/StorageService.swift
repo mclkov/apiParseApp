@@ -122,4 +122,34 @@ class StorageService {
             defaults.set(newValue, forKey: StorageConstants.gbpRateFloatKey)
         }
     }
+    
+    func saveExchangeRatesToLocalStorage(currencies: [String: CurrencyJSON]) {
+        for (key, value) in currencies {
+            saveExchangeRateFor(currencyKey: key, currencyInfo: value)
+        }
+    }
+    
+    func saveExchangeRateFor(currencyKey: String, currencyInfo: CurrencyJSON) {
+        var currencySymbol = ""
+        if let htmlToUtf8 = currencyInfo.symbol.htmlToUtf8() {
+            currencySymbol = htmlToUtf8
+        }
+        
+        switch currencyKey {
+        case "USD":
+            usdSymbol = currencySymbol
+            usdRate = currencyInfo.rate
+            usdRateFloat = currencyInfo.rateFloat
+        case "GBP":
+            gbpSymbol = currencySymbol
+            gbpRate = currencyInfo.rate
+            gbpRateFloat = currencyInfo.rateFloat
+        case "EUR":
+            eurSymbol = currencySymbol
+            eurRate = currencyInfo.rate
+            eurRateFloat = currencyInfo.rateFloat
+        default:
+            print("Unknown currency in API response: ", currencyKey)
+        }
+    }
 }
