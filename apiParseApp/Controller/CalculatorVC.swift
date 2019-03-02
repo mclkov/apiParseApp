@@ -64,55 +64,41 @@ class CalculatorVC: CustomViewController {
         calculateExchangeRate(operation: operation, currencyAmount: currencyFloat)
     }
     
+    func getOperationKey(_ operation: String) -> String {
+        if operation.count < 3 {
+            return ""
+        }
+        
+        let codeIndex = operation.index(operation.startIndex, offsetBy: 3)
+        return String(operation[..<codeIndex])
+    }
+    
     func calculateExchangeRate(operation: String, currencyAmount: Float) {
-        let storage = StorageService.shared
+        let storage = CoreDataManager.shared
         let calculator = ExchangeService()
+        
+        let exchangeRates: [String: Float] = storage.fetchExchangeRatesForCalculator()
+        let operation3LetterCode = getOperationKey(operation)
+        guard let exchangeRate = exchangeRates[operation3LetterCode] else { return }
+        
+        calculator.currencyA = currencyAmount
+        calculator.exchangeRate = exchangeRate
         
         switch operation {
         case "eur":
-            let exchangeRate = storage.eurRateFloat
-            
-            calculator.currencyA = currencyAmount
-            calculator.exchangeRate = exchangeRate
-            
+            calculator.directionAToB = false
             eurToBtcTextField.text = String(calculator.calculate())
         case "usd":
-            let exchangeRate = storage.usdRateFloat
-            
-            calculator.currencyA = currencyAmount
-            calculator.exchangeRate = exchangeRate
-            
+            calculator.directionAToB = false
             usdToBtcTextField.text = String(calculator.calculate())
         case "gbp":
-            let exchangeRate = storage.gbpRateFloat
-            
-            calculator.currencyA = currencyAmount
-            calculator.exchangeRate = exchangeRate
-            
+            calculator.directionAToB = false
             gbpToBtcTextField.text = String(calculator.calculate())
         case "eurToBtc":
-            let exchangeRate = storage.eurRateFloat
-            
-            calculator.currencyA = currencyAmount
-            calculator.exchangeRate = exchangeRate
-            calculator.directionAToB = false
-            
             eurTextField.text = String(calculator.calculate())
         case "usdToBtc":
-            let exchangeRate = storage.usdRateFloat
-            
-            calculator.currencyA = currencyAmount
-            calculator.exchangeRate = exchangeRate
-            calculator.directionAToB = false
-            
             usdTextField.text = String(calculator.calculate())
         case "gbpToBtc":
-            let exchangeRate = storage.gbpRateFloat
-            
-            calculator.currencyA = currencyAmount
-            calculator.exchangeRate = exchangeRate
-            calculator.directionAToB = false
-            
             gbpTextField.text = String(calculator.calculate())
         default:
             print("Unknown currency: ", operation)
