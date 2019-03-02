@@ -177,26 +177,6 @@ class MainVC: CustomViewController {
         }
     }
     
-    
-    
-    
-
-    func fetchLocalStorageData() {
-        let storage = StorageService.shared
-        
-        chartNameLabel.text = storage.chartName
-        timeUpdatedLabel.text = storage.timeUpdated
-        
-        usdSymbolLabel.text = storage.usdSymbol
-        usdRateLabel.text = storage.usdRate
-        
-        eurSymbolLabel.text = storage.eurSymbol
-        eurRateLabel.text = storage.eurRate
-        
-        gbpSymbolLabel.text = storage.gbpSymbol
-        gbpRateLabel.text = storage.gbpRate
-    }
-    
     @objc func presentCalculatorVC() {
         let calculatorVC = CalculatorVC()
         present(calculatorVC, animated: true, completion: nil)
