@@ -39,7 +39,7 @@ class MainVC: CustomViewController {
 
         
         self.setupView()
-        fetchLocalStorageData()
+//        fetchLocalStorageData()
         
         
         
@@ -71,6 +71,11 @@ class MainVC: CustomViewController {
     
     func fetchCoreDataStorage() {
         pageInfo = CoreDataManager.shared.fetchPageInfo()
+        
+        guard let pageInfo = pageInfo else { return }
+        
+        chartNameLabel.text = pageInfo.chartName
+//        timeUpdatedLabel.text = pageInfo.timeUpdated
     }
     
     func updatePageInfo(_ info: PageInfoProperties) {
@@ -83,6 +88,52 @@ class MainVC: CustomViewController {
         } catch let saveError {
             print("Failed to update info: ", saveError)
         }
+    }
+    
+    func fetchApiData(completionHandler: @escaping () -> Void) {
+        ApiService.shared.requestData { (data) in
+            guard let jsonData = data else {
+                self.connectionIssueCase()
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.saveApiDataToCoreData(data: jsonData)
+                self.fetchCoreDataStorage()
+                completionHandler()
+            }
+        }
+    }
+    
+    func connectionIssueCase() {
+        DispatchQueue.main.async {
+            self.showAlert(title: "Connection issue", message: "The internet connection appears to be offline")
+            self.stopUpdateSequence()
+        }
+    }
+    
+//    func stringTimeToLocalTime() {
+//        var timeUpdated = data.time.updated
+//        if let localTime = data.time.updatedISO.getLocalTimeStringFrom() {
+//            timeUpdated = localTime
+//        }
+//    }
+    
+    func saveApiDataToCoreData(data: ApiResponseJSON) {
+        var timeUpdated: Date?
+        if let localTime = data.time.updatedISO.convertStringToDate() {
+            timeUpdated = localTime
+        }
+        
+        let info = PageInfoProperties()
+        info.chartName = data.chartName
+        info.timeUpdated = timeUpdated
+        updatePageInfo(info)
+        
+//        storage.chartName = data.chartName
+//        storage.timeUpdated = timeUpdated
+//
+//        storage.saveExchangeRatesToLocalStorage(currencies: data.bpi)
     }
     
     
@@ -114,42 +165,6 @@ class MainVC: CustomViewController {
         self.fetchApiData {
             self.stopUpdateSequenceWithQueryDelay()
         }
-    }
-    
-    func fetchApiData(completionHandler: @escaping () -> Void) {
-        ApiService.shared.requestData { (data) in
-            guard let jsonData = data else {
-                self.connectionIssueCase()
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.saveApiDataToLocalStorage(data: jsonData)
-                self.fetchLocalStorageData()
-                completionHandler()
-            }
-        }
-    }
-    
-    func connectionIssueCase() {
-        DispatchQueue.main.async {
-            self.showAlert(title: "Connection issue", message: "The internet connection appears to be offline")
-            self.stopUpdateSequence()
-        }
-    }
-    
-    func saveApiDataToLocalStorage(data: ApiResponseJSON) {
-        let storage = StorageService.shared
-        
-        var timeUpdated = data.time.updated
-        if let localTime = data.time.updatedISO.getLocalTimeStringFrom() {
-            timeUpdated = localTime
-        }
-        
-        storage.chartName = data.chartName
-        storage.timeUpdated = timeUpdated
-        
-        storage.saveExchangeRatesToLocalStorage(currencies: data.bpi)
     }
 }
 
