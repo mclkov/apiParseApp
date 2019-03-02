@@ -42,12 +42,6 @@ class MainVC: CustomViewController {
         setupTableViewDelegateAndDataSource()
         addNotificationsForKeyboardBehaviour()
         fetchCoreDataStorage()
-    
-        if let localInfo = pageInfo {
-            print(localInfo.chartName)
-            print(localInfo.timeUpdated)
-        }
-        
     }
     
     func addNotificationsForKeyboardBehaviour() {
