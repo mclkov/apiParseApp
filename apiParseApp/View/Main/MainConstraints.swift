@@ -105,8 +105,8 @@ extension MainVC {
     func updateRequestButtonAnchors() {
         updateRequestButton.translatesAutoresizingMaskIntoConstraints = false
         
-        updateRequestButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        updateRequestButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        updateRequestButton.widthAnchor.constraint(equalToConstant: MainConstants.buttonSquareSize).isActive = true
+        updateRequestButton.heightAnchor.constraint(equalToConstant: MainConstants.buttonSquareSize).isActive = true
     }
     
     func buttonAvailabilityLabelAnchors() {
@@ -122,7 +122,7 @@ extension MainVC {
     func calculatorButtonAnchors() {
         calculatorButton.translatesAutoresizingMaskIntoConstraints = false
         
-        calculatorButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        calculatorButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        calculatorButton.widthAnchor.constraint(equalToConstant: MainConstants.buttonSquareSize).isActive = true
+        calculatorButton.heightAnchor.constraint(equalToConstant: MainConstants.buttonSquareSize).isActive = true
     }
 }
