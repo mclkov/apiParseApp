@@ -9,6 +9,9 @@
 import UIKit
 
 class ExchangeRateCell: UITableViewCell {
+    let symbolLabel = ExchangeRateLabel()
+    let rateLabel = ExchangeRateLabel()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -19,14 +22,25 @@ class ExchangeRateCell: UITableViewCell {
     }
     
     func setupView() {
-        self.setupBackgroundColor()
+        setupBackgroundColor()
+        setupSelectionStyle()
+        setupSymbolLabel()
     }
     
     private func setupBackgroundColor() {
         backgroundColor = ColorScheme.darkBlue
     }
     
+    private func setupSelectionStyle() {
+        selectionStyle = .none
+    }
+    
+    private func setupSymbolLabel() {
+        addSubview(symbolLabel)
+        symbolLabelAnchors()
+    }
+    
     func configureCell(exchangeRate: ExchangeRate) {
-        
+        symbolLabel.text = exchangeRate.symbol
     }
 }

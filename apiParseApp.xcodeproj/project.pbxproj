@@ -44,6 +44,8 @@
 		60A1D360222A86CE003F65FF /* Date+stringLocalDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D35F222A86CE003F65FF /* Date+stringLocalDate.swift */; };
 		60A1D366222AE24F003F65FF /* Main+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D365222AE24F003F65FF /* Main+TableView.swift */; };
 		60A1D368222AEDD5003F65FF /* ExchangeRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D367222AEDD5003F65FF /* ExchangeRateCell.swift */; };
+		60A1D36B222AF1CB003F65FF /* ExchangeRateCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D36A222AF1CB003F65FF /* ExchangeRateCellConstraints.swift */; };
+		60A1D36D222AF2CF003F65FF /* ExchangeRateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D36C222AF2CF003F65FF /* ExchangeRateLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		60A1D35F222A86CE003F65FF /* Date+stringLocalDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+stringLocalDate.swift"; sourceTree = "<group>"; };
 		60A1D365222AE24F003F65FF /* Main+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+TableView.swift"; sourceTree = "<group>"; };
 		60A1D367222AEDD5003F65FF /* ExchangeRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCell.swift; sourceTree = "<group>"; };
+		60A1D36A222AF1CB003F65FF /* ExchangeRateCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCellConstraints.swift; sourceTree = "<group>"; };
+		60A1D36C222AF2CF003F65FF /* ExchangeRateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,13 +236,12 @@
 		606DBD632227A55500621EF1 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				60A1D369222AF1A3003F65FF /* TableView */,
 				606DBD5F22279EBF00621EF1 /* MainLayout.swift */,
-				60A1D365222AE24F003F65FF /* Main+TableView.swift */,
 				606DBD802228622800621EF1 /* MainLayout+updateButtonBehaviour.swift */,
 				606DBD7E22285F2400621EF1 /* MainLayout+ExchangeRateLabels.swift */,
 				606DBD612227A54500621EF1 /* MainConstraints.swift */,
 				606DBD7C2228335B00621EF1 /* Main+showAlert.swift */,
-				60A1D367222AEDD5003F65FF /* ExchangeRateCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -251,6 +254,17 @@
 				606DBD8D222914C700621EF1 /* CurrencyLabel.swift */,
 			);
 			path = Calculator;
+			sourceTree = "<group>";
+		};
+		60A1D369222AF1A3003F65FF /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				60A1D365222AE24F003F65FF /* Main+TableView.swift */,
+				60A1D367222AEDD5003F65FF /* ExchangeRateCell.swift */,
+				60A1D36A222AF1CB003F65FF /* ExchangeRateCellConstraints.swift */,
+				60A1D36C222AF2CF003F65FF /* ExchangeRateLabel.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +400,8 @@
 				606DBD4E222705D000621EF1 /* ApiResponseJSON.swift in Sources */,
 				606DBD6D2227E6DC00621EF1 /* StorageService.swift in Sources */,
 				606DBD812228622800621EF1 /* MainLayout+updateButtonBehaviour.swift in Sources */,
+				60A1D36D222AF2CF003F65FF /* ExchangeRateLabel.swift in Sources */,
+				60A1D36B222AF1CB003F65FF /* ExchangeRateCellConstraints.swift in Sources */,
 				606DBD8E222914C700621EF1 /* CurrencyLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

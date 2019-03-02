@@ -28,4 +28,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func registerCellReuseId() {
         self.mainTableView.register(ExchangeRateCell.self, forCellReuseIdentifier: MainConstants.cellReuseId)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return MainConstants.tableViewRowHeight
+    }
 }
