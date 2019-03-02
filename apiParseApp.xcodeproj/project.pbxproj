@@ -38,6 +38,7 @@
 		606DBD8E222914C700621EF1 /* CurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD8D222914C700621EF1 /* CurrencyLabel.swift */; };
 		606DBD902229405200621EF1 /* UITextField+KeyboardDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD8F2229405200621EF1 /* UITextField+KeyboardDoneButton.swift */; };
 		606DBD922229459E00621EF1 /* ExchangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD912229459E00621EF1 /* ExchangeService.swift */; };
+		60A1D351222A5BCF003F65FF /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D34F222A5BCF003F65FF /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		606DBD8D222914C700621EF1 /* CurrencyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLabel.swift; sourceTree = "<group>"; };
 		606DBD8F2229405200621EF1 /* UITextField+KeyboardDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+KeyboardDoneButton.swift"; sourceTree = "<group>"; };
 		606DBD912229459E00621EF1 /* ExchangeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeService.swift; sourceTree = "<group>"; };
+		60A1D350222A5BCF003F65FF /* ExchangeRate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExchangeRate.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			children = (
 				606DBD4F2227060B00621EF1 /* API */,
 				606DBD4D222705D000621EF1 /* ApiResponseJSON.swift */,
+				60A1D34F222A5BCF003F65FF /* DataModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				606DBD7B22281FBD00621EF1 /* UIView+rotate360Degrees.swift in Sources */,
 				606DBD902229405200621EF1 /* UITextField+KeyboardDoneButton.swift in Sources */,
 				606DBD4E222705D000621EF1 /* ApiResponseJSON.swift in Sources */,
+				60A1D351222A5BCF003F65FF /* DataModel.xcdatamodeld in Sources */,
 				606DBD6D2227E6DC00621EF1 /* StorageService.swift in Sources */,
 				606DBD812228622800621EF1 /* MainLayout+updateButtonBehaviour.swift in Sources */,
 				606DBD8E222914C700621EF1 /* CurrencyLabel.swift in Sources */,
@@ -621,6 +625,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		60A1D34F222A5BCF003F65FF /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				60A1D350222A5BCF003F65FF /* ExchangeRate.xcdatamodel */,
+			);
+			currentVersion = 60A1D350222A5BCF003F65FF /* ExchangeRate.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 606DBD172226F98700621EF1 /* Project object */;
 }
