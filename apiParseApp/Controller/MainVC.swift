@@ -9,6 +9,9 @@
 import UIKit
 
 class MainVC: CustomViewController {
+    var pageInfo: PageInfo?
+    var exchangeRates: [ExchangeRate]?
+    
     let chartNameLabel = UILabel()
     let timeUpdatedLabel = UILabel()
     
@@ -37,6 +40,19 @@ class MainVC: CustomViewController {
         
         self.setupView()
         fetchLocalStorageData()
+        
+        
+        
+        fetchCoreDataStorage()
+        
+//        let info = PageInfo()
+//        info.chartName = "Test"
+//        info.timeUpdated = nil
+//        updatePageInfo(info)
+//        
+//        if let localInfo = pageInfo {
+//            print(localInfo.chartName)
+//        }
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -52,6 +68,24 @@ class MainVC: CustomViewController {
             self.view.frame.origin.y = 0
         }
     }
+    
+    func fetchCoreDataStorage() {
+        pageInfo = CoreDataManager.shared.fetchPageInfo()
+    }
+    
+    func updatePageInfo(_ info: PageInfo) {
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        pageInfo = info
+        
+        do {
+            try context.save()
+        } catch let saveError {
+            print("Failed to update info: ", saveError)
+        }
+    }
+    
+    
+    
 
     func fetchLocalStorageData() {
         let storage = StorageService.shared

@@ -7,10 +7,10 @@
     </entity>
     <entity name="PageInfo" representedClassName="PageInfo" syncable="YES" codeGenerationType="class">
         <attribute name="chartName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="timeUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="updated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ExchangeRate" positionX="-63" positionY="-18" width="128" height="90"/>
-        <element name="PageInfo" positionX="-54" positionY="18" width="128" height="75"/>
+        <element name="PageInfo" positionX="-45" positionY="0" width="128" height="75"/>
+        <element name="ExchangeRate" positionX="-18" positionY="45" width="128" height="90"/>
     </elements>
 </model>
