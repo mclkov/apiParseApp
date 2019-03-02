@@ -41,6 +41,7 @@
 		60A1D353222A5CE7003F65FF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D352222A5CE7003F65FF /* CoreDataManager.swift */; };
 		60A1D355222A6F53003F65FF /* PageInfoExtension+instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D354222A6F53003F65FF /* PageInfoExtension+instance.swift */; };
 		60A1D35C222A7BCC003F65FF /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D35A222A7BCC003F65FF /* DataModel.xcdatamodeld */; };
+		60A1D35E222A808E003F65FF /* PageInfoProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D35D222A808E003F65FF /* PageInfoProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		60A1D352222A5CE7003F65FF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		60A1D354222A6F53003F65FF /* PageInfoExtension+instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageInfoExtension+instance.swift"; sourceTree = "<group>"; };
 		60A1D35B222A7BCC003F65FF /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		60A1D35D222A808E003F65FF /* PageInfoProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfoProperties.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				606DBD4D222705D000621EF1 /* ApiResponseJSON.swift */,
 				60A1D354222A6F53003F65FF /* PageInfoExtension+instance.swift */,
 				60A1D35A222A7BCC003F65FF /* DataModel.xcdatamodeld */,
+				60A1D35D222A808E003F65FF /* PageInfoProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				606DBD7D2228335B00621EF1 /* Main+showAlert.swift in Sources */,
 				606DBD8322286A6F00621EF1 /* CalculatorVC.swift in Sources */,
 				606DBD8C2229019D00621EF1 /* CalculatorConstants.swift in Sources */,
+				60A1D35E222A808E003F65FF /* PageInfoProperties.swift in Sources */,
 				60A1D355222A6F53003F65FF /* PageInfoExtension+instance.swift in Sources */,
 				606DBD882228F20100621EF1 /* CalculatorConstraints.swift in Sources */,
 				606DBD482226FED400621EF1 /* WebRequestImpl.swift in Sources */,

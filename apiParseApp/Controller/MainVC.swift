@@ -45,14 +45,14 @@ class MainVC: CustomViewController {
         
         fetchCoreDataStorage()
         
-//        let info = PageInfo()
-//        info.chartName = "Test"
+//        let info = PageInfoProperties()
+//        info.chartName = "Test2"
 //        info.timeUpdated = nil
 //        updatePageInfo(info)
-//        
-//        if let localInfo = pageInfo {
-//            print(localInfo.chartName)
-//        }
+//
+        if let localInfo = pageInfo {
+            print(localInfo.chartName)
+        }
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -73,9 +73,10 @@ class MainVC: CustomViewController {
         pageInfo = CoreDataManager.shared.fetchPageInfo()
     }
     
-    func updatePageInfo(_ info: PageInfo) {
+    func updatePageInfo(_ info: PageInfoProperties) {
         let context = CoreDataManager.shared.persistentContainer.viewContext
-        pageInfo = info
+        pageInfo?.chartName = info.chartName
+        pageInfo?.timeUpdated = info.timeUpdated
         
         do {
             try context.save()

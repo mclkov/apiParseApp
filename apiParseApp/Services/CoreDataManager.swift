@@ -21,17 +21,28 @@ struct CoreDataManager {
         return container
     }()
     
-    func fetchPageInfo() -> PageInfo {
-        var pageInfo = PageInfo()
-        if let info = pageInfo.instance() {
-            pageInfo = info
+    func instance() -> PageInfo? {
+        let context = persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<PageInfo>(entityName: "PageInfo")
+        
+        do {
+            let resultFetch = try context.fetch(fetchRequest)
+            return resultFetch.first
+        } catch let fetchError {
+            print("Cannot fetch: ", fetchError)
+        }
+        return nil
+    }
+    
+    func fetchPageInfo() -> PageInfo? {
+        if let info = instance() {
+            return info
         } else {
             if let info = createPageInfo() {
-                pageInfo = info
+                return info
             }
         }
-        
-        return pageInfo
+        return nil
     }
     
     func createPageInfo() -> PageInfo? {
