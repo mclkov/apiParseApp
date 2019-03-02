@@ -13,7 +13,7 @@ extension MainVC {
         setupBackgroundColor()
         
         setupTopLabels()
-        setupExchangeRateLabels()
+//        setupExchangeRateLabels()
         
         setupCopyringsLabel()
         setupUpdateRequestButton()
