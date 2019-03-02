@@ -89,16 +89,17 @@ struct CoreDataManager {
         }
     }
     
-    func fetchExchangeRatesForCalculator() -> [ExchangeRate] {
-        let context = persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<ExchangeRate>(entityName: "ExchangeRate")
+    func fetchExchangeRatesForCalculator() -> [String: Float] {
+        let fetchedResult = fetchExchangeRates()
+        var result = [String: Float]()
         
-        do {
-            let resultFetch = try context.fetch(fetchRequest)
-            return resultFetch
-        } catch let fetchError {
-            print("Failed to fetch companies:", fetchError)
-            return []
+        for value in fetchedResult {
+            guard let code = value.code else { continue }
+            let rateFloat = value.rateFloat
+            
+            result[code] = rateFloat
         }
+        
+        return result
     }
 }
