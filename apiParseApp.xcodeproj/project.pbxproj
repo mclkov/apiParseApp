@@ -43,6 +43,7 @@
 		60A1D35E222A808E003F65FF /* PageInfoProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D35D222A808E003F65FF /* PageInfoProperties.swift */; };
 		60A1D360222A86CE003F65FF /* Date+stringLocalDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D35F222A86CE003F65FF /* Date+stringLocalDate.swift */; };
 		60A1D366222AE24F003F65FF /* Main+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D365222AE24F003F65FF /* Main+TableView.swift */; };
+		60A1D368222AEDD5003F65FF /* ExchangeRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D367222AEDD5003F65FF /* ExchangeRateCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		60A1D35D222A808E003F65FF /* PageInfoProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfoProperties.swift; sourceTree = "<group>"; };
 		60A1D35F222A86CE003F65FF /* Date+stringLocalDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+stringLocalDate.swift"; sourceTree = "<group>"; };
 		60A1D365222AE24F003F65FF /* Main+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+TableView.swift"; sourceTree = "<group>"; };
+		60A1D367222AEDD5003F65FF /* ExchangeRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				606DBD7E22285F2400621EF1 /* MainLayout+ExchangeRateLabels.swift */,
 				606DBD612227A54500621EF1 /* MainConstraints.swift */,
 				606DBD7C2228335B00621EF1 /* Main+showAlert.swift */,
+				60A1D367222AEDD5003F65FF /* ExchangeRateCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				606DBD742227E98E00621EF1 /* StorageConstants.swift in Sources */,
 				606DBD7F22285F2400621EF1 /* MainLayout+ExchangeRateLabels.swift in Sources */,
 				606DBD762227F37900621EF1 /* String+dateConvertation.swift in Sources */,
+				60A1D368222AEDD5003F65FF /* ExchangeRateCell.swift in Sources */,
 				606DBD7D2228335B00621EF1 /* Main+showAlert.swift in Sources */,
 				606DBD8322286A6F00621EF1 /* CalculatorVC.swift in Sources */,
 				606DBD8C2229019D00621EF1 /* CalculatorConstants.swift in Sources */,

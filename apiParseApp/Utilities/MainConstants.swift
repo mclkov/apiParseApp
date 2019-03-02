@@ -20,5 +20,6 @@ struct MainConstants {
     static let delayInSecondsBetweenQueries: Double = 60.0
     
     static let buttonSquareSize: CGFloat = 50.0
+    static let cellReuseId = "cellId"
 }
 

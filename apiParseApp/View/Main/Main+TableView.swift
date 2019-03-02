@@ -20,4 +20,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
+    func registerCellReuseId() {
+        self.mainTableView.register(ExchangeRateCell.self, forCellReuseIdentifier: MainConstants.cellReuseId)
+    }
 }
