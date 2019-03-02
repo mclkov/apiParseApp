@@ -39,6 +39,8 @@
 		606DBD902229405200621EF1 /* UITextField+KeyboardDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD8F2229405200621EF1 /* UITextField+KeyboardDoneButton.swift */; };
 		606DBD922229459E00621EF1 /* ExchangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DBD912229459E00621EF1 /* ExchangeService.swift */; };
 		60A1D351222A5BCF003F65FF /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D34F222A5BCF003F65FF /* DataModel.xcdatamodeld */; };
+		60A1D353222A5CE7003F65FF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D352222A5CE7003F65FF /* CoreDataManager.swift */; };
+		60A1D355222A6F53003F65FF /* PageInfoExtension+instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D354222A6F53003F65FF /* PageInfoExtension+instance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		606DBD8F2229405200621EF1 /* UITextField+KeyboardDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+KeyboardDoneButton.swift"; sourceTree = "<group>"; };
 		606DBD912229459E00621EF1 /* ExchangeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeService.swift; sourceTree = "<group>"; };
 		60A1D350222A5BCF003F65FF /* ExchangeRate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExchangeRate.xcdatamodel; sourceTree = "<group>"; };
+		60A1D352222A5CE7003F65FF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		60A1D354222A6F53003F65FF /* PageInfoExtension+instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageInfoExtension+instance.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 				606DBD472226FED400621EF1 /* WebRequestImpl.swift */,
 				606DBD6C2227E6DC00621EF1 /* StorageService.swift */,
 				606DBD912229459E00621EF1 /* ExchangeService.swift */,
+				60A1D352222A5CE7003F65FF /* CoreDataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				606DBD4F2227060B00621EF1 /* API */,
 				606DBD4D222705D000621EF1 /* ApiResponseJSON.swift */,
 				60A1D34F222A5BCF003F65FF /* DataModel.xcdatamodeld */,
+				60A1D354222A6F53003F65FF /* PageInfoExtension+instance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				606DBD7D2228335B00621EF1 /* Main+showAlert.swift in Sources */,
 				606DBD8322286A6F00621EF1 /* CalculatorVC.swift in Sources */,
 				606DBD8C2229019D00621EF1 /* CalculatorConstants.swift in Sources */,
+				60A1D355222A6F53003F65FF /* PageInfoExtension+instance.swift in Sources */,
 				606DBD882228F20100621EF1 /* CalculatorConstraints.swift in Sources */,
 				606DBD482226FED400621EF1 /* WebRequestImpl.swift in Sources */,
 				606DBD6022279EBF00621EF1 /* MainLayout.swift in Sources */,
@@ -360,6 +367,7 @@
 				606DBD512227061B00621EF1 /* TimeJSON.swift in Sources */,
 				606DBD622227A54500621EF1 /* MainConstraints.swift in Sources */,
 				606DBD462226FE4200621EF1 /* ApiService.swift in Sources */,
+				60A1D353222A5CE7003F65FF /* CoreDataManager.swift in Sources */,
 				606DBD7B22281FBD00621EF1 /* UIView+rotate360Degrees.swift in Sources */,
 				606DBD902229405200621EF1 /* UITextField+KeyboardDoneButton.swift in Sources */,
 				606DBD4E222705D000621EF1 /* ApiResponseJSON.swift in Sources */,
