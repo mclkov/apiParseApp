@@ -74,9 +74,10 @@ class MainVC: CustomViewController {
         pageInfo = CoreDataManager.shared.fetchPageInfo()
         
         guard let pageInfo = pageInfo else { return }
+        guard let updatedTimeDate = pageInfo.timeUpdated else { return }
         
         chartNameLabel.text = pageInfo.chartName
-//        timeUpdatedLabel.text = pageInfo.timeUpdated
+        timeUpdatedLabel.text = updatedTimeDate.getLocalTimeString()
     }
     
     func updatePageInfo(_ info: PageInfoProperties) {

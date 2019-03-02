@@ -42,6 +42,7 @@
 		60A1D355222A6F53003F65FF /* PageInfoExtension+instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D354222A6F53003F65FF /* PageInfoExtension+instance.swift */; };
 		60A1D35C222A7BCC003F65FF /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D35A222A7BCC003F65FF /* DataModel.xcdatamodeld */; };
 		60A1D35E222A808E003F65FF /* PageInfoProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D35D222A808E003F65FF /* PageInfoProperties.swift */; };
+		60A1D360222A86CE003F65FF /* Date+stringLocalDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D35F222A86CE003F65FF /* Date+stringLocalDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		60A1D354222A6F53003F65FF /* PageInfoExtension+instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageInfoExtension+instance.swift"; sourceTree = "<group>"; };
 		60A1D35B222A7BCC003F65FF /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		60A1D35D222A808E003F65FF /* PageInfoProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfoProperties.swift; sourceTree = "<group>"; };
+		60A1D35F222A86CE003F65FF /* Date+stringLocalDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+stringLocalDate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				606DBD4A2226FF5500621EF1 /* MainConstants.swift */,
 				606DBD8B2229019D00621EF1 /* CalculatorConstants.swift */,
 				606DBD732227E98E00621EF1 /* StorageConstants.swift */,
+				60A1D35F222A86CE003F65FF /* Date+stringLocalDate.swift */,
 				606DBD6A2227CB1700621EF1 /* String+htmlToUtf8.swift */,
 				606DBD752227F37900621EF1 /* String+dateConvertation.swift */,
 				606DBD7A22281FBD00621EF1 /* UIView+rotate360Degrees.swift */,
@@ -373,6 +376,7 @@
 				606DBD462226FE4200621EF1 /* ApiService.swift in Sources */,
 				60A1D353222A5CE7003F65FF /* CoreDataManager.swift in Sources */,
 				606DBD7B22281FBD00621EF1 /* UIView+rotate360Degrees.swift in Sources */,
+				60A1D360222A86CE003F65FF /* Date+stringLocalDate.swift in Sources */,
 				60A1D35C222A7BCC003F65FF /* DataModel.xcdatamodeld in Sources */,
 				606DBD902229405200621EF1 /* UITextField+KeyboardDoneButton.swift in Sources */,
 				606DBD4E222705D000621EF1 /* ApiResponseJSON.swift in Sources */,
