@@ -20,6 +20,6 @@ class ExchangeRateLabel: UILabel {
     
     func customizeView() {
         textColor = .white
-        font = UIFont(name: CalculatorConstants.calculatorFont, size: 14)
+        font = UIFont(name: CalculatorConstants.calculatorFont, size: 20)
     }
 }

@@ -25,6 +25,7 @@ class ExchangeRateCell: UITableViewCell {
         setupBackgroundColor()
         setupSelectionStyle()
         setupSymbolLabel()
+        setupRateLabel()
     }
     
     private func setupBackgroundColor() {
@@ -40,7 +41,13 @@ class ExchangeRateCell: UITableViewCell {
         symbolLabelAnchors()
     }
     
+    private func setupRateLabel() {
+        addSubview(rateLabel)
+        rateLabelAnchors()
+    }
+    
     func configureCell(exchangeRate: ExchangeRate) {
         symbolLabel.text = exchangeRate.symbol
+        rateLabel.text = exchangeRate.rate
     }
 }

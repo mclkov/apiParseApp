@@ -17,4 +17,13 @@ extension ExchangeRateCell {
         symbolLabel.widthAnchor.constraint(equalToConstant: 20).isActive = true
         symbolLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
+    
+    func rateLabelAnchors() {
+        rateLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        rateLabel.topAnchor.constraint(equalTo: symbolLabel.topAnchor).isActive = true
+        rateLabel.leadingAnchor.constraint(equalTo: symbolLabel.trailingAnchor).isActive = true
+        rateLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        rateLabel.bottomAnchor.constraint(equalTo: symbolLabel.bottomAnchor).isActive = true
+    }
 }
