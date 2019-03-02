@@ -142,7 +142,7 @@ extension MainVC {
     func mainTableViewAnchors() {
         mainTableView.translatesAutoresizingMaskIntoConstraints = false
         
-        mainTableView.topAnchor.constraint(equalTo: timeUpdatedLabel.bottomAnchor).isActive = true
+        mainTableView.topAnchor.constraint(equalTo: timeUpdatedLabel.bottomAnchor, constant: 10).isActive = true
         mainTableView.bottomAnchor.constraint(equalTo: buttonAvailabilityLabel.topAnchor).isActive = true
         mainTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         mainTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true

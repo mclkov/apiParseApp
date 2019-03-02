@@ -13,7 +13,7 @@ extension ExchangeRateCell {
         symbolLabel.translatesAutoresizingMaskIntoConstraints = false
         
         symbolLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        symbolLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 6).isActive = true
+        symbolLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30).isActive = true
         symbolLabel.widthAnchor.constraint(equalToConstant: 20).isActive = true
         symbolLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
