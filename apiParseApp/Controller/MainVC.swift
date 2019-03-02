@@ -18,15 +18,6 @@ class MainVC: CustomViewController {
     let chartNameLabel = UILabel()
     let timeUpdatedLabel = UILabel()
     
-    let usdSymbolLabel = UILabel()
-    let gbpSymbolLabel = UILabel()
-    let eurSymbolLabel = UILabel()
-    
-    let usdRateLabel = UILabel()
-    let gbpRateLabel = UILabel()
-    let eurRateLabel = UILabel()
-    
-    
     let buttonStackView = UIStackView()
     let buttonAvailabilityLabel = UILabel()
     let calculatorButton = UIButton()

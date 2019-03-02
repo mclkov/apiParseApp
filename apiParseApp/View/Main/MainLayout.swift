@@ -13,7 +13,6 @@ extension MainVC {
         setupBackgroundColor()
         
         setupTopLabels()
-//        setupExchangeRateLabels()
         
         setupCopyringsLabel()
         setupUpdateRequestButton()
@@ -47,18 +46,6 @@ extension MainVC {
         
         view.insertSubview(timeUpdatedLabel, at: 0)
         self.timeUpdatedLabelAnchors()
-    }
-    
-    func setupExchangeRateLabels() {
-        // disabled
-        setupUsdSymbolLabel()
-        setupUsdRateLabel()
-        
-        setupEurSymbolLabel()
-        setupEurRateLabel()
-        
-        setupGbpSymbolLabel()
-        setupGbpRateLabel()
     }
     
     func setupCopyringsLabel() {
