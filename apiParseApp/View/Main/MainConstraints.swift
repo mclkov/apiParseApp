@@ -28,9 +28,9 @@ extension MainVC {
         timeUpdatedLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
     
-    func mainTableViewAnchors() {
-//        mainTableView.topAnchor
-    }
+    
+    
+    
     
     
     
@@ -92,6 +92,13 @@ extension MainVC {
         gbpRateLabel.heightAnchor.constraint(equalToConstant: MainConstants.rateLabelHeight).isActive = true
     }
     
+    
+    
+    
+    
+    
+    
+    
     func copyrightLabelAnchors() {
         copyrightLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -130,5 +137,14 @@ extension MainVC {
         
         calculatorButton.widthAnchor.constraint(equalToConstant: MainConstants.buttonSquareSize).isActive = true
         calculatorButton.heightAnchor.constraint(equalToConstant: MainConstants.buttonSquareSize).isActive = true
+    }
+    
+    func mainTableViewAnchors() {
+        mainTableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        mainTableView.topAnchor.constraint(equalTo: timeUpdatedLabel.bottomAnchor).isActive = true
+        mainTableView.bottomAnchor.constraint(equalTo: buttonAvailabilityLabel.topAnchor).isActive = true
+        mainTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        mainTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
 }

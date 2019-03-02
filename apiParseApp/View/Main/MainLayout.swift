@@ -14,7 +14,6 @@ extension MainVC {
         
         setupTopLabels()
 //        setupExchangeRateLabels()
-        setupMainTableView()
         
         setupCopyringsLabel()
         setupUpdateRequestButton()
@@ -22,6 +21,7 @@ extension MainVC {
         setupButtonStackView()
         
         setupButtonAvailabilityLabel()
+        setupMainTableView()
     }
     
     func setupBackgroundColor() {
@@ -47,12 +47,6 @@ extension MainVC {
         
         view.insertSubview(timeUpdatedLabel, at: 0)
         self.timeUpdatedLabelAnchors()
-    }
-    
-    func setupMainTableView() {
-        view.insertSubview(mainTableView, at: 0)
-        
-        self.mainTableViewAnchors()
     }
     
     func setupExchangeRateLabels() {
@@ -113,5 +107,13 @@ extension MainVC {
         
         view.insertSubview(buttonAvailabilityLabel, at: 0)
         self.buttonAvailabilityLabelAnchors()
+    }
+    
+    func setupMainTableView() {
+        mainTableView.separatorStyle = .none
+        mainTableView.backgroundColor = ColorScheme.darkBlue
+        
+        view.insertSubview(mainTableView, at: 0)
+        self.mainTableViewAnchors()
     }
 }
