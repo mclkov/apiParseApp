@@ -40,21 +40,13 @@ class MainVC: CustomViewController {
 
         
         self.setupView()
-//        fetchLocalStorageData()
-        
-        
-        
         fetchCoreDataStorage()
-        
-//        let info = PageInfoProperties()
-//        info.chartName = "Test2"
-//        info.timeUpdated = nil
-//        updatePageInfo(info)
-//
+    
         if let localInfo = pageInfo {
             print(localInfo.chartName)
             print(localInfo.timeUpdated)
         }
+        
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -72,6 +64,11 @@ class MainVC: CustomViewController {
     }
     
     func fetchCoreDataStorage() {
+        fetchPageInfo()
+        fetchExchangeRates()
+    }
+    
+    func fetchPageInfo() {
         pageInfo = CoreDataManager.shared.fetchPageInfo()
         
         guard let pageInfo = pageInfo else { return }
@@ -79,6 +76,15 @@ class MainVC: CustomViewController {
         
         chartNameLabel.text = pageInfo.chartName
         timeUpdatedLabel.text = updatedTimeDate.getLocalTimeString()
+    }
+    
+    func fetchExchangeRates() {
+        exchangeRates = CoreDataManager.shared.fetchExchangeRates()
+        
+        guard let exchangeRates = exchangeRates else { return }
+        for value in exchangeRates {
+            print("\(value.symbol) \(value.rate)")
+        }
     }
     
     func updatePageInfo(_ info: PageInfoProperties) {
