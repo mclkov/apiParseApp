@@ -14,6 +14,7 @@ extension MainVC {
         
         setupTopLabels()
 //        setupExchangeRateLabels()
+        setupMainTableView()
         
         setupCopyringsLabel()
         setupUpdateRequestButton()
@@ -48,7 +49,14 @@ extension MainVC {
         self.timeUpdatedLabelAnchors()
     }
     
+    func setupMainTableView() {
+        view.insertSubview(mainTableView, at: 0)
+        
+        self.mainTableViewAnchors()
+    }
+    
     func setupExchangeRateLabels() {
+        // disabled
         setupUsdSymbolLabel()
         setupUsdRateLabel()
         

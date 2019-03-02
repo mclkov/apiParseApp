@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class MainVC: CustomViewController {
-    var mainTableVC = MainTableVC()
+    var mainTableView = UITableView()
     
     var pageInfo: PageInfo?
     var exchangeRates: [ExchangeRate]?

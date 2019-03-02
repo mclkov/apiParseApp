@@ -28,6 +28,12 @@ extension MainVC {
         timeUpdatedLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
     
+    func mainTableViewAnchors() {
+        
+    }
+    
+    
+    
     func usdSymbolLabelAnchors() {
         usdSymbolLabel.translatesAutoresizingMaskIntoConstraints = false
         

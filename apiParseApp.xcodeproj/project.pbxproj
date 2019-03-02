@@ -42,7 +42,7 @@
 		60A1D35C222A7BCC003F65FF /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D35A222A7BCC003F65FF /* DataModel.xcdatamodeld */; };
 		60A1D35E222A808E003F65FF /* PageInfoProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D35D222A808E003F65FF /* PageInfoProperties.swift */; };
 		60A1D360222A86CE003F65FF /* Date+stringLocalDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D35F222A86CE003F65FF /* Date+stringLocalDate.swift */; };
-		60A1D364222ADC62003F65FF /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D363222ADC62003F65FF /* MainTableVC.swift */; };
+		60A1D366222AE24F003F65FF /* Main+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1D365222AE24F003F65FF /* Main+TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +95,7 @@
 		60A1D35B222A7BCC003F65FF /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		60A1D35D222A808E003F65FF /* PageInfoProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfoProperties.swift; sourceTree = "<group>"; };
 		60A1D35F222A86CE003F65FF /* Date+stringLocalDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+stringLocalDate.swift"; sourceTree = "<group>"; };
-		60A1D363222ADC62003F65FF /* MainTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
+		60A1D365222AE24F003F65FF /* Main+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+TableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +164,6 @@
 				606DBD8222286A6F00621EF1 /* CalculatorVC.swift */,
 				606DBD662227A75000621EF1 /* CustomViewController.swift */,
 				606DBD222226F98700621EF1 /* AppDelegate.swift */,
-				60A1D363222ADC62003F65FF /* MainTableVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -232,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				606DBD5F22279EBF00621EF1 /* MainLayout.swift */,
+				60A1D365222AE24F003F65FF /* Main+TableView.swift */,
 				606DBD802228622800621EF1 /* MainLayout+updateButtonBehaviour.swift */,
 				606DBD7E22285F2400621EF1 /* MainLayout+ExchangeRateLabels.swift */,
 				606DBD612227A54500621EF1 /* MainConstraints.swift */,
@@ -354,7 +354,6 @@
 				606DBD8A222900D800621EF1 /* DecimalTextField.swift in Sources */,
 				606DBD862228F13600621EF1 /* CalculatorLayout.swift in Sources */,
 				606DBD742227E98E00621EF1 /* StorageConstants.swift in Sources */,
-				60A1D364222ADC62003F65FF /* MainTableVC.swift in Sources */,
 				606DBD7F22285F2400621EF1 /* MainLayout+ExchangeRateLabels.swift in Sources */,
 				606DBD762227F37900621EF1 /* String+dateConvertation.swift in Sources */,
 				606DBD7D2228335B00621EF1 /* Main+showAlert.swift in Sources */,
@@ -378,6 +377,7 @@
 				606DBD7B22281FBD00621EF1 /* UIView+rotate360Degrees.swift in Sources */,
 				60A1D360222A86CE003F65FF /* Date+stringLocalDate.swift in Sources */,
 				60A1D35C222A7BCC003F65FF /* DataModel.xcdatamodeld in Sources */,
+				60A1D366222AE24F003F65FF /* Main+TableView.swift in Sources */,
 				606DBD902229405200621EF1 /* UITextField+KeyboardDoneButton.swift in Sources */,
 				606DBD4E222705D000621EF1 /* ApiResponseJSON.swift in Sources */,
 				606DBD6D2227E6DC00621EF1 /* StorageService.swift in Sources */,
