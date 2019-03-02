@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MainVC: CustomViewController {
     var pageInfo: PageInfo?
@@ -117,13 +118,6 @@ class MainVC: CustomViewController {
         }
     }
     
-//    func stringTimeToLocalTime() {
-//        var timeUpdated = data.time.updated
-//        if let localTime = data.time.updatedISO.getLocalTimeStringFrom() {
-//            timeUpdated = localTime
-//        }
-//    }
-    
     func saveApiDataToCoreData(data: ApiResponseJSON) {
         var timeUpdated: Date?
         if let localTime = data.time.updatedISO.convertStringToDate() {
@@ -133,13 +127,43 @@ class MainVC: CustomViewController {
         let info = PageInfoProperties()
         info.chartName = data.chartName
         info.timeUpdated = timeUpdated
-        updatePageInfo(info)
         
-//        storage.chartName = data.chartName
-//        storage.timeUpdated = timeUpdated
-//
-//        storage.saveExchangeRatesToLocalStorage(currencies: data.bpi)
+        updatePageInfo(info)
+        updateExchangeRates(currencies: data.bpi)
     }
+    
+    func updateExchangeRates(currencies: [String: CurrencyJSON]) {
+        CoreDataManager.shared.resetExchangeRates()
+        saveExchangeRatesToLocalStorage(currencies: currencies)
+    }
+
+    func saveExchangeRatesToLocalStorage(currencies: [String: CurrencyJSON]) {
+        CoreDataManager.shared.persistentContainer.performBackgroundTask { (backgroundContext) in
+            
+            for (currencyKey, currencyInfo) in currencies {
+                var currencySymbol = ""
+                if let htmlToUtf8 = currencyInfo.symbol.htmlToUtf8() {
+                    currencySymbol = htmlToUtf8
+                }
+                
+                let exchange = ExchangeRate(context: backgroundContext)
+                exchange.symbol = currencySymbol
+                exchange.rate = currencyInfo.rate
+                exchange.rateFloat = currencyInfo.rateFloat
+            }
+            
+            do {
+                try backgroundContext.save()
+                
+                DispatchQueue.main.async {
+                    self.fetchCoreDataStorage()
+                }
+            } catch let error {
+                print("Failed to save backgroundContext: ", error)
+            }
+        }
+    }
+    
     
     
     

@@ -21,7 +21,7 @@ struct CoreDataManager {
         return container
     }()
     
-    func instance() -> PageInfo? {
+    func getPageInfoInstance() -> PageInfo? {
         let context = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<PageInfo>(entityName: "PageInfo")
         
@@ -35,7 +35,7 @@ struct CoreDataManager {
     }
     
     func fetchPageInfo() -> PageInfo? {
-        if let info = instance() {
+        if let info = getPageInfoInstance() {
             return info
         } else {
             if let info = createPageInfo() {
@@ -62,6 +62,30 @@ struct CoreDataManager {
         } catch let saveError {
             print("Failed to create pageInfo: ", saveError)
             return nil
+        }
+    }
+    
+    func resetExchangeRates() {
+        let context = persistentContainer.viewContext
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: ExchangeRate.fetchRequest())
+        
+        do {
+            try context.execute(batchDeleteRequest)
+        } catch let deleteError {
+            print("Failed to delete objects from CoreData: ", deleteError)
+        }
+    }
+    
+    func fetchExchangeRates() -> [ExchangeRate] {
+        let context = persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<ExchangeRate>(entityName: "ExchangeRate")
+    
+        do {
+            let resultFetch = try context.fetch(fetchRequest)
+            return resultFetch
+        } catch let fetchError {
+            print("Failed to fetch companies:", fetchError)
+            return []
         }
     }
 }
