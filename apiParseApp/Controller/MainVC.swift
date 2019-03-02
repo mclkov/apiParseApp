@@ -91,9 +91,7 @@ class MainVC: CustomViewController {
     
     func fetchExchangeRates() {
         exchangeRates = CoreDataManager.shared.fetchExchangeRates()
-        for value in exchangeRates {
-            print("\(value.symbol) \(value.rate)")
-        }
+        mainTableView.reloadData()
     }
     
     func updatePageInfo(_ info: PageInfoProperties) {
