@@ -60,11 +60,11 @@ class MainVC: CustomViewController {
     }
     
     func fetchCoreDataStorage() {
-        fetchPageInfo()
-        fetchExchangeRates()
+        fetchPageInfoAndUpdateUI()
+        fetchExchangeRatesAndUpdateUI()
     }
     
-    func fetchPageInfo() {
+    func fetchPageInfoAndUpdateUI() {
         pageInfo = CoreDataManager.shared.fetchPageInfo()
         
         guard let pageInfo = pageInfo else { return }
@@ -74,7 +74,7 @@ class MainVC: CustomViewController {
         timeUpdatedLabel.text = updatedTimeDate.getLocalTimeString()
     }
     
-    func fetchExchangeRates() {
+    func fetchExchangeRatesAndUpdateUI() {
         exchangeRates = CoreDataManager.shared.fetchExchangeRates()
         mainTableView.reloadData()
     }
