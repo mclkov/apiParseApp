@@ -37,11 +37,10 @@ class MainVC: CustomViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
-        
         self.setupView()
+        
+        setupTableViewDelegateAndDataSource()
+        addNotificationsForKeyboardBehaviour()
         fetchCoreDataStorage()
     
         if let localInfo = pageInfo {
@@ -49,6 +48,16 @@ class MainVC: CustomViewController {
             print(localInfo.timeUpdated)
         }
         
+    }
+    
+    func addNotificationsForKeyboardBehaviour() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func setupTableViewDelegateAndDataSource() {
+        mainTableView.delegate = self
+        mainTableView.dataSource = self
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {

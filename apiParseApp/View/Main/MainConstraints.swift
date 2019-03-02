@@ -29,7 +29,7 @@ extension MainVC {
     }
     
     func mainTableViewAnchors() {
-        
+//        mainTableView.topAnchor
     }
     
     
