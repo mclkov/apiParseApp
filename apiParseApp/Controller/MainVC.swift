@@ -52,6 +52,7 @@ class MainVC: CustomViewController {
 //
         if let localInfo = pageInfo {
             print(localInfo.chartName)
+            print(localInfo.timeUpdated)
         }
     }
     
@@ -80,8 +81,11 @@ class MainVC: CustomViewController {
     
     func updatePageInfo(_ info: PageInfoProperties) {
         let context = CoreDataManager.shared.persistentContainer.viewContext
-        pageInfo?.chartName = info.chartName
-        pageInfo?.timeUpdated = info.timeUpdated
+        
+        guard let pageInfo = pageInfo else { return }
+        
+        pageInfo.chartName = info.chartName
+        pageInfo.timeUpdated = info.timeUpdated
         
         do {
             try context.save()
